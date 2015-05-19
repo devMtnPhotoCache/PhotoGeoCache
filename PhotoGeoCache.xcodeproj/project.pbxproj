@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D02931581B0ADD05005175B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931571B0ADD05005175B1 /* main.m */; };
+		D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D029315A1B0ADD05005175B1 /* AppDelegate.m */; };
+		D029315E1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D029315C1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld */; };
+		D02931611B0ADD05005175B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931601B0ADD05005175B1 /* ViewController.m */; };
+		D02931641B0ADD05005175B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02931621B0ADD05005175B1 /* Main.storyboard */; };
+		D02931661B0ADD05005175B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02931651B0ADD05005175B1 /* Images.xcassets */; };
+		D02931691B0ADD05005175B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02931671B0ADD05005175B1 /* LaunchScreen.xib */; };
+		D02931751B0ADD05005175B1 /* PhotoGeoCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931741B0ADD05005175B1 /* PhotoGeoCacheTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D029316F1B0ADD05005175B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D029314A1B0ADD05005175B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D02931511B0ADD05005175B1;
+			remoteInfo = PhotoGeoCache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D02931521B0ADD05005175B1 /* PhotoGeoCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGeoCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02931561B0ADD05005175B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02931571B0ADD05005175B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D02931591B0ADD05005175B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D029315A1B0ADD05005175B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D029315D1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoGeoCache.xcdatamodel; sourceTree = "<group>"; };
+		D029315F1B0ADD05005175B1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D02931601B0ADD05005175B1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D02931631B0ADD05005175B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D02931651B0ADD05005175B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D02931681B0ADD05005175B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D029316E1B0ADD05005175B1 /* PhotoGeoCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGeoCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02931731B0ADD05005175B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02931741B0ADD05005175B1 /* PhotoGeoCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGeoCacheTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D029314F1B0ADD05005175B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D029316B1B0ADD05005175B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D02931491B0ADD05005175B1 = {
+			isa = PBXGroup;
+			children = (
+				D02931541B0ADD05005175B1 /* PhotoGeoCache */,
+				D02931711B0ADD05005175B1 /* PhotoGeoCacheTests */,
+				D02931531B0ADD05005175B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D02931531B0ADD05005175B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D02931521B0ADD05005175B1 /* PhotoGeoCache.app */,
+				D029316E1B0ADD05005175B1 /* PhotoGeoCacheTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D02931541B0ADD05005175B1 /* PhotoGeoCache */ = {
+			isa = PBXGroup;
+			children = (
+				D02931591B0ADD05005175B1 /* AppDelegate.h */,
+				D029315A1B0ADD05005175B1 /* AppDelegate.m */,
+				D029315F1B0ADD05005175B1 /* ViewController.h */,
+				D02931601B0ADD05005175B1 /* ViewController.m */,
+				D02931621B0ADD05005175B1 /* Main.storyboard */,
+				D02931651B0ADD05005175B1 /* Images.xcassets */,
+				D02931671B0ADD05005175B1 /* LaunchScreen.xib */,
+				D029315C1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld */,
+				D02931551B0ADD05005175B1 /* Supporting Files */,
+			);
+			path = PhotoGeoCache;
+			sourceTree = "<group>";
+		};
+		D02931551B0ADD05005175B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D02931561B0ADD05005175B1 /* Info.plist */,
+				D02931571B0ADD05005175B1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D02931711B0ADD05005175B1 /* PhotoGeoCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				D02931741B0ADD05005175B1 /* PhotoGeoCacheTests.m */,
+				D02931721B0ADD05005175B1 /* Supporting Files */,
+			);
+			path = PhotoGeoCacheTests;
+			sourceTree = "<group>";
+		};
+		D02931721B0ADD05005175B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D02931731B0ADD05005175B1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D02931511B0ADD05005175B1 /* PhotoGeoCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D02931781B0ADD05005175B1 /* Build configuration list for PBXNativeTarget "PhotoGeoCache" */;
+			buildPhases = (
+				D029314E1B0ADD05005175B1 /* Sources */,
+				D029314F1B0ADD05005175B1 /* Frameworks */,
+				D02931501B0ADD05005175B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoGeoCache;
+			productName = PhotoGeoCache;
+			productReference = D02931521B0ADD05005175B1 /* PhotoGeoCache.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D029316D1B0ADD05005175B1 /* PhotoGeoCacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D029317B1B0ADD05005175B1 /* Build configuration list for PBXNativeTarget "PhotoGeoCacheTests" */;
+			buildPhases = (
+				D029316A1B0ADD05005175B1 /* Sources */,
+				D029316B1B0ADD05005175B1 /* Frameworks */,
+				D029316C1B0ADD05005175B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D02931701B0ADD05005175B1 /* PBXTargetDependency */,
+			);
+			name = PhotoGeoCacheTests;
+			productName = PhotoGeoCacheTests;
+			productReference = D029316E1B0ADD05005175B1 /* PhotoGeoCacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D029314A1B0ADD05005175B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = PhotoGeoCache;
+				TargetAttributes = {
+					D02931511B0ADD05005175B1 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					D029316D1B0ADD05005175B1 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = D02931511B0ADD05005175B1;
+					};
+				};
+			};
+			buildConfigurationList = D029314D1B0ADD05005175B1 /* Build configuration list for PBXProject "PhotoGeoCache" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D02931491B0ADD05005175B1;
+			productRefGroup = D02931531B0ADD05005175B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D02931511B0ADD05005175B1 /* PhotoGeoCache */,
+				D029316D1B0ADD05005175B1 /* PhotoGeoCacheTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D02931501B0ADD05005175B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02931641B0ADD05005175B1 /* Main.storyboard in Resources */,
+				D02931691B0ADD05005175B1 /* LaunchScreen.xib in Resources */,
+				D02931661B0ADD05005175B1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D029316C1B0ADD05005175B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D029314E1B0ADD05005175B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */,
+				D029315E1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld in Sources */,
+				D02931611B0ADD05005175B1 /* ViewController.m in Sources */,
+				D02931581B0ADD05005175B1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D029316A1B0ADD05005175B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02931751B0ADD05005175B1 /* PhotoGeoCacheTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D02931701B0ADD05005175B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D02931511B0ADD05005175B1 /* PhotoGeoCache */;
+			targetProxy = D029316F1B0ADD05005175B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D02931621B0ADD05005175B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02931631B0ADD05005175B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D02931671B0ADD05005175B1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02931681B0ADD05005175B1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D02931761B0ADD05005175B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D02931771B0ADD05005175B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D02931791B0ADD05005175B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotoGeoCache/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D029317A1B0ADD05005175B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotoGeoCache/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D029317C1B0ADD05005175B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhotoGeoCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoGeoCache.app/PhotoGeoCache";
+			};
+			name = Debug;
+		};
+		D029317D1B0ADD05005175B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PhotoGeoCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoGeoCache.app/PhotoGeoCache";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D029314D1B0ADD05005175B1 /* Build configuration list for PBXProject "PhotoGeoCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02931761B0ADD05005175B1 /* Debug */,
+				D02931771B0ADD05005175B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D02931781B0ADD05005175B1 /* Build configuration list for PBXNativeTarget "PhotoGeoCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02931791B0ADD05005175B1 /* Debug */,
+				D029317A1B0ADD05005175B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D029317B1B0ADD05005175B1 /* Build configuration list for PBXNativeTarget "PhotoGeoCacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D029317C1B0ADD05005175B1 /* Debug */,
+				D029317D1B0ADD05005175B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D029315C1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D029315D1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodel */,
+			);
+			currentVersion = D029315D1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodel */;
+			path = PhotoGeoCache.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D029314A1B0ADD05005175B1 /* Project object */;
+}
