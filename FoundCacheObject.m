@@ -10,4 +10,10 @@
 
 @implementation FoundCacheObject
 
+@dynamic whoFoundIt;
+@dynamic dateFound;
+@dynamic cacheID;
+@dynamic pointValue;
+@dynamic photo;
+
 @end

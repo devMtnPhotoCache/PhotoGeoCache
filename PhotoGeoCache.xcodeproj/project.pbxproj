@@ -39,7 +39,7 @@
 		EB800A0C1B0E69E000E22E5F /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A061B0E69E000E22E5F /* ParseFacebookUtilsV4.framework */; };
 		EB800A101B0E6B6C00E22E5F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A0F1B0E6B6C00E22E5F /* User.m */; };
 		EB800A131B0E6B8000E22E5F /* FoundCacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A121B0E6B8000E22E5F /* FoundCacheObject.m */; };
-		EB800A161B0E6B8C00E22E5F /* CacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A151B0E6B8C00E22E5F /* CacheObject.m */; };
+		EB800A161B0E6B8C00E22E5F /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A151B0E6B8C00E22E5F /* Cache.m */; };
 		EB800A191B0E6B9A00E22E5F /* Rating.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A181B0E6B9A00E22E5F /* Rating.m */; };
 		EB800A1C1B0E6BE200E22E5F /* PrimaryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A1B1B0E6BE200E22E5F /* PrimaryCollectionViewController.m */; };
 		EB800A221B0E6C4000E22E5F /* CacheDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */; };
@@ -108,8 +108,8 @@
 		EB800A0F1B0E6B6C00E22E5F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		EB800A111B0E6B8000E22E5F /* FoundCacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundCacheObject.h; path = ../FoundCacheObject.h; sourceTree = "<group>"; };
 		EB800A121B0E6B8000E22E5F /* FoundCacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoundCacheObject.m; path = ../FoundCacheObject.m; sourceTree = "<group>"; };
-		EB800A141B0E6B8C00E22E5F /* CacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CacheObject.h; path = ../CacheObject.h; sourceTree = "<group>"; };
-		EB800A151B0E6B8C00E22E5F /* CacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CacheObject.m; path = ../CacheObject.m; sourceTree = "<group>"; };
+		EB800A141B0E6B8C00E22E5F /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cache.h; path = ../Cache.h; sourceTree = "<group>"; };
+		EB800A151B0E6B8C00E22E5F /* Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cache.m; path = ../Cache.m; sourceTree = "<group>"; };
 		EB800A171B0E6B9A00E22E5F /* Rating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rating.h; path = ../Rating.h; sourceTree = "<group>"; };
 		EB800A181B0E6B9A00E22E5F /* Rating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rating.m; path = ../Rating.m; sourceTree = "<group>"; };
 		EB800A1A1B0E6BE200E22E5F /* PrimaryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimaryCollectionViewController.h; path = ../PrimaryCollectionViewController.h; sourceTree = "<group>"; };
@@ -302,8 +302,8 @@
 				EB800A0F1B0E6B6C00E22E5F /* User.m */,
 				EB800A111B0E6B8000E22E5F /* FoundCacheObject.h */,
 				EB800A121B0E6B8000E22E5F /* FoundCacheObject.m */,
-				EB800A141B0E6B8C00E22E5F /* CacheObject.h */,
-				EB800A151B0E6B8C00E22E5F /* CacheObject.m */,
+				EB800A141B0E6B8C00E22E5F /* Cache.h */,
+				EB800A151B0E6B8C00E22E5F /* Cache.m */,
 				EB800A171B0E6B9A00E22E5F /* Rating.h */,
 				EB800A181B0E6B9A00E22E5F /* Rating.m */,
 				EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */,
@@ -492,7 +492,7 @@
 				EB800A281B0E6C6300E22E5F /* CameraViewController.m in Sources */,
 				EB800A341B0E6D8400E22E5F /* MapDataController.m in Sources */,
 				EB800A3B1B0E736800E22E5F /* ViewController.m in Sources */,
-				EB800A161B0E6B8C00E22E5F /* CacheObject.m in Sources */,
+				EB800A161B0E6B8C00E22E5F /* Cache.m in Sources */,
 				EB800A2B1B0E6C7F00E22E5F /* UserDataController.m in Sources */,
 				EB800A2E1B0E6D3C00E22E5F /* ParseLoginViewController.m in Sources */,
 				EB800A251B0E6C4D00E22E5F /* MapViewController.m in Sources */,

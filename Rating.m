@@ -10,4 +10,9 @@
 
 @implementation Rating
 
+@dynamic starValue;
+@dynamic UserThatLeftRating;
+@dynamic CacheName;
+@dynamic date;
+
 @end

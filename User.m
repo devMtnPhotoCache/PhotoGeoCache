@@ -10,4 +10,12 @@
 
 @implementation User
 
+@dynamic Username;
+@dynamic password;
+@dynamic cachesCompleted;
+@dynamic favoritesQueue;
+@dynamic profilePicture;
+@dynamic realName;
+@dynamic friends;
+
 @end

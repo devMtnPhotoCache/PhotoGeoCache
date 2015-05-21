@@ -10,4 +10,10 @@
 
 @interface FoundCacheObject : PFObject
 
+@property (nonatomic, strong) NSArray *whoFoundIt;
+@property (nonatomic, strong) NSDate *dateFound;
+@property (nonatomic, strong) NSString *cacheID;
+@property (nonatomic, assign) int pointValue;
+@property (nonatomic, strong) PFFile *photo;
+
 @end
