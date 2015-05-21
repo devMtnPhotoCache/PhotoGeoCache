@@ -114,18 +114,22 @@
 		EB800A181B0E6B9A00E22E5F /* Rating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rating.m; path = ../Rating.m; sourceTree = "<group>"; };
 		EB800A1A1B0E6BE200E22E5F /* PrimaryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimaryCollectionViewController.h; path = ../PrimaryCollectionViewController.h; sourceTree = "<group>"; };
 		EB800A1B1B0E6BE200E22E5F /* PrimaryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrimaryCollectionViewController.m; path = ../PrimaryCollectionViewController.m; sourceTree = "<group>"; };
+		EB800A1D1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimaryCollectionViewControllerDataSource.h; path = ../PrimaryCollectionViewControllerDataSource.h; sourceTree = "<group>"; };
+		EB800A1E1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrimaryCollectionViewControllerDataSource.m; path = ../PrimaryCollectionViewControllerDataSource.m; sourceTree = "<group>"; };
+		EB800A201B0E6C4000E22E5F /* CacheDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CacheDetailViewController.h; path = ../CacheDetailViewController.h; sourceTree = "<group>"; };
+		EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CacheDetailViewController.m; path = ../CacheDetailViewController.m; sourceTree = "<group>"; };
 		EB800A201B0E6C4000E22E5F /* CacheDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheDetailViewController.h; sourceTree = "<group>"; };
 		EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDetailViewController.m; sourceTree = "<group>"; };
 		EB800A231B0E6C4D00E22E5F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
 		EB800A241B0E6C4D00E22E5F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
 		EB800A261B0E6C6300E22E5F /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
 		EB800A271B0E6C6300E22E5F /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
-		EB800A291B0E6C7F00E22E5F /* UserDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataController.h; sourceTree = "<group>"; };
-		EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataController.m; sourceTree = "<group>"; };
-		EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLoginViewController.h; sourceTree = "<group>"; };
-		EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLoginViewController.m; sourceTree = "<group>"; };
-		EB800A2F1B0E6D4F00E22E5F /* CreateAChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAChallengeViewController.h; sourceTree = "<group>"; };
-		EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAChallengeViewController.m; sourceTree = "<group>"; };
+		EB800A291B0E6C7F00E22E5F /* UserDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataController.h; path = ../UserDataController.h; sourceTree = "<group>"; };
+		EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataController.m; path = ../UserDataController.m; sourceTree = "<group>"; };
+		EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseLoginViewController.h; path = ../ParseLoginViewController.h; sourceTree = "<group>"; };
+		EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseLoginViewController.m; path = ../ParseLoginViewController.m; sourceTree = "<group>"; };
+		EB800A2F1B0E6D4F00E22E5F /* CreateAChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAChallengeViewController.h; path = ../CreateAChallengeViewController.h; sourceTree = "<group>"; };
+		EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAChallengeViewController.m; path = ../CreateAChallengeViewController.m; sourceTree = "<group>"; };
 		EB800A321B0E6D8400E22E5F /* MapDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapDataController.h; path = ../MapDataController.h; sourceTree = "<group>"; };
 		EB800A331B0E6D8400E22E5F /* MapDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapDataController.m; path = ../MapDataController.m; sourceTree = "<group>"; };
 		EB800A391B0E736800E22E5F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -206,14 +210,6 @@
 		D02931491B0ADD05005175B1 = {
 			isa = PBXGroup;
 			children = (
-				EB800A201B0E6C4000E22E5F /* CacheDetailViewController.h */,
-				EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */,
-				EB800A291B0E6C7F00E22E5F /* UserDataController.h */,
-				EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */,
-				EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */,
-				EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */,
-				EB800A2F1B0E6D4F00E22E5F /* CreateAChallengeViewController.h */,
-				EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */,
 				D02931541B0ADD05005175B1 /* PhotoGeoCache */,
 				D02931711B0ADD05005175B1 /* PhotoGeoCacheTests */,
 				D02931531B0ADD05005175B1 /* Products */,
@@ -238,8 +234,14 @@
 				D029315A1B0ADD05005175B1 /* AppDelegate.m */,
 				EB800A391B0E736800E22E5F /* ViewController.h */,
 				EB800A3A1B0E736800E22E5F /* ViewController.m */,
+				EB800A201B0E6C4000E22E5F /* CacheDetailViewController.h */,
+				EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */,
+				EB800A291B0E6C7F00E22E5F /* UserDataController.h */,
+				EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */,
+				EB800A2F1B0E6D4F00E22E5F /* CreateAChallengeViewController.h */,
+				EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */,
 				D02931621B0ADD05005175B1 /* Main.storyboard */,
-				EB800A351B0E6D9C00E22E5F /* PFObjects */,
+				EB800A351B0E6D9C00E22E5F /* ParseThings */,
 				EB800A381B0E6E2B00E22E5F /* Maps */,
 				EB800A371B0E6E1000E22E5F /* Camera */,
 				EB800A361B0E6DE800E22E5F /* PrimaryCollectionView */,
@@ -293,7 +295,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EB800A351B0E6D9C00E22E5F /* PFObjects */ = {
+		EB800A351B0E6D9C00E22E5F /* ParseThings */ = {
 			isa = PBXGroup;
 			children = (
 				EB800A0E1B0E6B6C00E22E5F /* User.h */,
@@ -304,8 +306,10 @@
 				EB800A151B0E6B8C00E22E5F /* CacheObject.m */,
 				EB800A171B0E6B9A00E22E5F /* Rating.h */,
 				EB800A181B0E6B9A00E22E5F /* Rating.m */,
+				EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */,
+				EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */,
 			);
-			name = PFObjects;
+			name = ParseThings;
 			sourceTree = "<group>";
 		};
 		EB800A361B0E6DE800E22E5F /* PrimaryCollectionView */ = {
