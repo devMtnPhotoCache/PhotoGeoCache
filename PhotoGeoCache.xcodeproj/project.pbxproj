@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		D02931581B0ADD05005175B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931571B0ADD05005175B1 /* main.m */; };
 		D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D029315A1B0ADD05005175B1 /* AppDelegate.m */; };
-		D029315E1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D029315C1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld */; };
-		D02931611B0ADD05005175B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931601B0ADD05005175B1 /* ViewController.m */; };
 		D02931641B0ADD05005175B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02931621B0ADD05005175B1 /* Main.storyboard */; };
 		D02931661B0ADD05005175B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02931651B0ADD05005175B1 /* Images.xcassets */; };
 		D02931691B0ADD05005175B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02931671B0ADD05005175B1 /* LaunchScreen.xib */; };
@@ -32,6 +30,19 @@
 		EB800A0B1B0E69E000E22E5F /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A051B0E69E000E22E5F /* ParseFacebookUtils.framework */; };
 		EB800A0C1B0E69E000E22E5F /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A061B0E69E000E22E5F /* ParseFacebookUtilsV4.framework */; };
 		EB800A0D1B0E69E000E22E5F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A071B0E69E000E22E5F /* ParseUI.framework */; };
+		EB800A101B0E6B6C00E22E5F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A0F1B0E6B6C00E22E5F /* User.m */; };
+		EB800A131B0E6B8000E22E5F /* FoundCacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A121B0E6B8000E22E5F /* FoundCacheObject.m */; };
+		EB800A161B0E6B8C00E22E5F /* CacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A151B0E6B8C00E22E5F /* CacheObject.m */; };
+		EB800A191B0E6B9A00E22E5F /* Rating.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A181B0E6B9A00E22E5F /* Rating.m */; };
+		EB800A1C1B0E6BE200E22E5F /* PrimaryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A1B1B0E6BE200E22E5F /* PrimaryCollectionViewController.m */; };
+		EB800A1F1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A1E1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.m */; };
+		EB800A221B0E6C4000E22E5F /* CacheDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */; };
+		EB800A251B0E6C4D00E22E5F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A241B0E6C4D00E22E5F /* MapViewController.m */; };
+		EB800A281B0E6C6300E22E5F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A271B0E6C6300E22E5F /* CameraViewController.m */; };
+		EB800A2B1B0E6C7F00E22E5F /* UserDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */; };
+		EB800A2E1B0E6D3C00E22E5F /* ParseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */; };
+		EB800A311B0E6D4F00E22E5F /* CreateAChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */; };
+		EB800A341B0E6D8400E22E5F /* MapDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A331B0E6D8400E22E5F /* MapDataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +61,6 @@
 		D02931571B0ADD05005175B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D02931591B0ADD05005175B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D029315A1B0ADD05005175B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D029315D1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoGeoCache.xcdatamodel; sourceTree = "<group>"; };
-		D029315F1B0ADD05005175B1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D02931601B0ADD05005175B1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D02931631B0ADD05005175B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D02931651B0ADD05005175B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D02931681B0ADD05005175B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -76,6 +84,32 @@
 		EB800A051B0E69E000E22E5F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		EB800A061B0E69E000E22E5F /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		EB800A071B0E69E000E22E5F /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		EB800A0E1B0E6B6C00E22E5F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
+		EB800A0F1B0E6B6C00E22E5F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
+		EB800A111B0E6B8000E22E5F /* FoundCacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoundCacheObject.h; path = ../FoundCacheObject.h; sourceTree = "<group>"; };
+		EB800A121B0E6B8000E22E5F /* FoundCacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoundCacheObject.m; path = ../FoundCacheObject.m; sourceTree = "<group>"; };
+		EB800A141B0E6B8C00E22E5F /* CacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CacheObject.h; path = ../CacheObject.h; sourceTree = "<group>"; };
+		EB800A151B0E6B8C00E22E5F /* CacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CacheObject.m; path = ../CacheObject.m; sourceTree = "<group>"; };
+		EB800A171B0E6B9A00E22E5F /* Rating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rating.h; path = ../Rating.h; sourceTree = "<group>"; };
+		EB800A181B0E6B9A00E22E5F /* Rating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rating.m; path = ../Rating.m; sourceTree = "<group>"; };
+		EB800A1A1B0E6BE200E22E5F /* PrimaryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimaryCollectionViewController.h; path = ../PrimaryCollectionViewController.h; sourceTree = "<group>"; };
+		EB800A1B1B0E6BE200E22E5F /* PrimaryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrimaryCollectionViewController.m; path = ../PrimaryCollectionViewController.m; sourceTree = "<group>"; };
+		EB800A1D1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimaryCollectionViewControllerDataSource.h; path = ../PrimaryCollectionViewControllerDataSource.h; sourceTree = "<group>"; };
+		EB800A1E1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrimaryCollectionViewControllerDataSource.m; path = ../PrimaryCollectionViewControllerDataSource.m; sourceTree = "<group>"; };
+		EB800A201B0E6C4000E22E5F /* CacheDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheDetailViewController.h; sourceTree = "<group>"; };
+		EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDetailViewController.m; sourceTree = "<group>"; };
+		EB800A231B0E6C4D00E22E5F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
+		EB800A241B0E6C4D00E22E5F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
+		EB800A261B0E6C6300E22E5F /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
+		EB800A271B0E6C6300E22E5F /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
+		EB800A291B0E6C7F00E22E5F /* UserDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataController.h; sourceTree = "<group>"; };
+		EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataController.m; sourceTree = "<group>"; };
+		EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLoginViewController.h; sourceTree = "<group>"; };
+		EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLoginViewController.m; sourceTree = "<group>"; };
+		EB800A2F1B0E6D4F00E22E5F /* CreateAChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAChallengeViewController.h; sourceTree = "<group>"; };
+		EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAChallengeViewController.m; sourceTree = "<group>"; };
+		EB800A321B0E6D8400E22E5F /* MapDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapDataController.h; path = ../MapDataController.h; sourceTree = "<group>"; };
+		EB800A331B0E6D8400E22E5F /* MapDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapDataController.m; path = ../MapDataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +150,14 @@
 		D02931491B0ADD05005175B1 = {
 			isa = PBXGroup;
 			children = (
+				EB800A201B0E6C4000E22E5F /* CacheDetailViewController.h */,
+				EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */,
+				EB800A291B0E6C7F00E22E5F /* UserDataController.h */,
+				EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */,
+				EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */,
+				EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */,
+				EB800A2F1B0E6D4F00E22E5F /* CreateAChallengeViewController.h */,
+				EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */,
 				D02931541B0ADD05005175B1 /* PhotoGeoCache */,
 				D02931711B0ADD05005175B1 /* PhotoGeoCacheTests */,
 				D02931531B0ADD05005175B1 /* Products */,
@@ -136,12 +178,13 @@
 			children = (
 				D02931591B0ADD05005175B1 /* AppDelegate.h */,
 				D029315A1B0ADD05005175B1 /* AppDelegate.m */,
-				D029315F1B0ADD05005175B1 /* ViewController.h */,
-				D02931601B0ADD05005175B1 /* ViewController.m */,
 				D02931621B0ADD05005175B1 /* Main.storyboard */,
+				EB800A351B0E6D9C00E22E5F /* PFObjects */,
+				EB800A381B0E6E2B00E22E5F /* Maps */,
+				EB800A371B0E6E1000E22E5F /* Camera */,
+				EB800A361B0E6DE800E22E5F /* PrimaryCollectionView */,
 				D02931651B0ADD05005175B1 /* Images.xcassets */,
 				D02931671B0ADD05005175B1 /* LaunchScreen.xib */,
-				D029315C1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld */,
 				D02931551B0ADD05005175B1 /* Supporting Files */,
 			);
 			path = PhotoGeoCache;
@@ -188,6 +231,52 @@
 				D02931731B0ADD05005175B1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB800A351B0E6D9C00E22E5F /* PFObjects */ = {
+			isa = PBXGroup;
+			children = (
+				EB800A0E1B0E6B6C00E22E5F /* User.h */,
+				EB800A0F1B0E6B6C00E22E5F /* User.m */,
+				EB800A111B0E6B8000E22E5F /* FoundCacheObject.h */,
+				EB800A121B0E6B8000E22E5F /* FoundCacheObject.m */,
+				EB800A141B0E6B8C00E22E5F /* CacheObject.h */,
+				EB800A151B0E6B8C00E22E5F /* CacheObject.m */,
+				EB800A171B0E6B9A00E22E5F /* Rating.h */,
+				EB800A181B0E6B9A00E22E5F /* Rating.m */,
+			);
+			name = PFObjects;
+			sourceTree = "<group>";
+		};
+		EB800A361B0E6DE800E22E5F /* PrimaryCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				EB800A1A1B0E6BE200E22E5F /* PrimaryCollectionViewController.h */,
+				EB800A1B1B0E6BE200E22E5F /* PrimaryCollectionViewController.m */,
+				EB800A1D1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.h */,
+				EB800A1E1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.m */,
+			);
+			name = PrimaryCollectionView;
+			sourceTree = "<group>";
+		};
+		EB800A371B0E6E1000E22E5F /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				EB800A261B0E6C6300E22E5F /* CameraViewController.h */,
+				EB800A271B0E6C6300E22E5F /* CameraViewController.m */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		EB800A381B0E6E2B00E22E5F /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				EB800A321B0E6D8400E22E5F /* MapDataController.h */,
+				EB800A331B0E6D8400E22E5F /* MapDataController.m */,
+				EB800A231B0E6C4D00E22E5F /* MapViewController.h */,
+				EB800A241B0E6C4D00E22E5F /* MapViewController.m */,
+			);
+			name = Maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,10 +379,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB800A1F1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.m in Sources */,
+				EB800A101B0E6B6C00E22E5F /* User.m in Sources */,
+				EB800A1C1B0E6BE200E22E5F /* PrimaryCollectionViewController.m in Sources */,
 				D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */,
-				D029315E1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld in Sources */,
-				D02931611B0ADD05005175B1 /* ViewController.m in Sources */,
+				EB800A131B0E6B8000E22E5F /* FoundCacheObject.m in Sources */,
+				EB800A221B0E6C4000E22E5F /* CacheDetailViewController.m in Sources */,
 				D02931581B0ADD05005175B1 /* main.m in Sources */,
+				EB800A191B0E6B9A00E22E5F /* Rating.m in Sources */,
+				EB800A281B0E6C6300E22E5F /* CameraViewController.m in Sources */,
+				EB800A341B0E6D8400E22E5F /* MapDataController.m in Sources */,
+				EB800A161B0E6B8C00E22E5F /* CacheObject.m in Sources */,
+				EB800A2B1B0E6C7F00E22E5F /* UserDataController.m in Sources */,
+				EB800A2E1B0E6D3C00E22E5F /* ParseLoginViewController.m in Sources */,
+				EB800A251B0E6C4D00E22E5F /* MapViewController.m in Sources */,
+				EB800A311B0E6D4F00E22E5F /* CreateAChallengeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,19 +604,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D029315C1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D029315D1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodel */,
-			);
-			currentVersion = D029315D1B0ADD05005175B1 /* PhotoGeoCache.xcdatamodel */;
-			path = PhotoGeoCache.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D029314A1B0ADD05005175B1 /* Project object */;
 }
