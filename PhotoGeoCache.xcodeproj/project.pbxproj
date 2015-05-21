@@ -43,6 +43,7 @@
 		EB800A2E1B0E6D3C00E22E5F /* ParseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */; };
 		EB800A311B0E6D4F00E22E5F /* CreateAChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */; };
 		EB800A341B0E6D8400E22E5F /* MapDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A331B0E6D8400E22E5F /* MapDataController.m */; };
+		EB800A3B1B0E736800E22E5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A3A1B0E736800E22E5F /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateAChallengeViewController.m; sourceTree = "<group>"; };
 		EB800A321B0E6D8400E22E5F /* MapDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapDataController.h; path = ../MapDataController.h; sourceTree = "<group>"; };
 		EB800A331B0E6D8400E22E5F /* MapDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapDataController.m; path = ../MapDataController.m; sourceTree = "<group>"; };
+		EB800A391B0E736800E22E5F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EB800A3A1B0E736800E22E5F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 			children = (
 				D02931591B0ADD05005175B1 /* AppDelegate.h */,
 				D029315A1B0ADD05005175B1 /* AppDelegate.m */,
+				EB800A391B0E736800E22E5F /* ViewController.h */,
+				EB800A3A1B0E736800E22E5F /* ViewController.m */,
 				D02931621B0ADD05005175B1 /* Main.storyboard */,
 				EB800A351B0E6D9C00E22E5F /* PFObjects */,
 				EB800A381B0E6E2B00E22E5F /* Maps */,
@@ -389,6 +394,7 @@
 				EB800A191B0E6B9A00E22E5F /* Rating.m in Sources */,
 				EB800A281B0E6C6300E22E5F /* CameraViewController.m in Sources */,
 				EB800A341B0E6D8400E22E5F /* MapDataController.m in Sources */,
+				EB800A3B1B0E736800E22E5F /* ViewController.m in Sources */,
 				EB800A161B0E6B8C00E22E5F /* CacheObject.m in Sources */,
 				EB800A2B1B0E6C7F00E22E5F /* UserDataController.m in Sources */,
 				EB800A2E1B0E6D3C00E22E5F /* ParseLoginViewController.m in Sources */,
