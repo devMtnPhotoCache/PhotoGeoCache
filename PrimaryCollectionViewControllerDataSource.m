@@ -7,7 +7,24 @@
 //
 
 #import "PrimaryCollectionViewControllerDataSource.h"
+#import "PictureFeedCollectionViewCell.h"
 
 @implementation PrimaryCollectionViewControllerDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 1;
+    
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    PictureFeedCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
+    
+    return cell;
+}
+
+
 
 @end

@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 PhotoGeoCache. All rights reserved.
 //
 
-#import "ViewController.h"
+@import Foundation;
+@import UIKit;
 
-@interface CacheDetailViewController : ViewController
+@interface CacheDetailViewController : UIViewController
 
 @end

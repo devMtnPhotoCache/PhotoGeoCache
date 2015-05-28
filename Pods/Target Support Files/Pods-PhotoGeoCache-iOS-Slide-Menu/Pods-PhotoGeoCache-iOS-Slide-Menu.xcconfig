@@ -1,0 +1,1 @@
+PODS_PHOTOGEOCACHE_IOS_SLIDE_MENU_OTHER_LDFLAGS = -framework "Foundation" -framework "UIKit"

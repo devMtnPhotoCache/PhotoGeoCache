@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B46CB0D303CDCFF19A60C06 /* libPods-PhotoGeoCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAA190A3D5DD25ECDBAECA1 /* libPods-PhotoGeoCache.a */; };
+		7D16785D1B17B0CF00396644 /* PictureFeedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D16785C1B17B0CF00396644 /* PictureFeedCollectionViewCell.m */; };
+		7D1678791B17D03F00396644 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678731B17D03F00396644 /* Bolts.framework */; };
+		7D16787A1B17D03F00396644 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678741B17D03F00396644 /* Parse.framework */; };
+		7D16787B1B17D03F00396644 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678751B17D03F00396644 /* ParseCrashReporting.framework */; };
+		7D16787C1B17D03F00396644 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678761B17D03F00396644 /* ParseFacebookUtils.framework */; };
+		7D16787D1B17D03F00396644 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678771B17D03F00396644 /* ParseFacebookUtilsV4.framework */; };
+		7D16787E1B17D03F00396644 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678781B17D03F00396644 /* ParseUI.framework */; };
 		D02931581B0ADD05005175B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931571B0ADD05005175B1 /* main.m */; };
 		D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D029315A1B0ADD05005175B1 /* AppDelegate.m */; };
 		D02931641B0ADD05005175B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02931621B0ADD05005175B1 /* Main.storyboard */; };
@@ -24,12 +32,10 @@
 		EB8009FD1B0E691800E22E5F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8009FC1B0E691800E22E5F /* SystemConfiguration.framework */; };
 		EB8009FF1B0E692C00E22E5F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8009FE1B0E692C00E22E5F /* libz.dylib */; };
 		EB800A011B0E693700E22E5F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A001B0E693700E22E5F /* libsqlite3.dylib */; };
-		EB800A081B0E69E000E22E5F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A021B0E69E000E22E5F /* Bolts.framework */; };
 		EB800A091B0E69E000E22E5F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A031B0E69E000E22E5F /* Parse.framework */; };
 		EB800A0A1B0E69E000E22E5F /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A041B0E69E000E22E5F /* ParseCrashReporting.framework */; };
 		EB800A0B1B0E69E000E22E5F /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A051B0E69E000E22E5F /* ParseFacebookUtils.framework */; };
 		EB800A0C1B0E69E000E22E5F /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A061B0E69E000E22E5F /* ParseFacebookUtilsV4.framework */; };
-		EB800A0D1B0E69E000E22E5F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB800A071B0E69E000E22E5F /* ParseUI.framework */; };
 		EB800A101B0E6B6C00E22E5F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A0F1B0E6B6C00E22E5F /* User.m */; };
 		EB800A131B0E6B8000E22E5F /* FoundCacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A121B0E6B8000E22E5F /* FoundCacheObject.m */; };
 		EB800A161B0E6B8C00E22E5F /* CacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A151B0E6B8C00E22E5F /* CacheObject.m */; };
@@ -56,6 +62,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BAA190A3D5DD25ECDBAECA1 /* libPods-PhotoGeoCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoGeoCache.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D16785B1B17B0CF00396644 /* PictureFeedCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureFeedCollectionViewCell.h; sourceTree = "<group>"; };
+		7D16785C1B17B0CF00396644 /* PictureFeedCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureFeedCollectionViewCell.m; sourceTree = "<group>"; };
+		7D1678731B17D03F00396644 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		7D1678741B17D03F00396644 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		7D1678751B17D03F00396644 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		7D1678761B17D03F00396644 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		7D1678771B17D03F00396644 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		7D1678781B17D03F00396644 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		9D50E0BC9B546D36910903A7 /* Pods-PhotoGeoCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGeoCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoGeoCache/Pods-PhotoGeoCache.debug.xcconfig"; sourceTree = "<group>"; };
 		D02931521B0ADD05005175B1 /* PhotoGeoCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGeoCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02931561B0ADD05005175B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02931571B0ADD05005175B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -67,6 +83,7 @@
 		D029316E1B0ADD05005175B1 /* PhotoGeoCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGeoCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02931731B0ADD05005175B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02931741B0ADD05005175B1 /* PhotoGeoCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGeoCacheTests.m; sourceTree = "<group>"; };
+		E92C51F56730005601E9F3CB /* Pods-PhotoGeoCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGeoCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoGeoCache/Pods-PhotoGeoCache.release.xcconfig"; sourceTree = "<group>"; };
 		EB8009EC1B0E68C300E22E5F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EB8009EE1B0E68CE00E22E5F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		EB8009F01B0E68D800E22E5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,23 +134,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D16787E1B17D03F00396644 /* ParseUI.framework in Frameworks */,
 				EB800A011B0E693700E22E5F /* libsqlite3.dylib in Frameworks */,
 				EB8009FF1B0E692C00E22E5F /* libz.dylib in Frameworks */,
+				7D16787D1B17D03F00396644 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				EB8009FD1B0E691800E22E5F /* SystemConfiguration.framework in Frameworks */,
-				EB800A081B0E69E000E22E5F /* Bolts.framework in Frameworks */,
 				EB8009FB1B0E690700E22E5F /* StoreKit.framework in Frameworks */,
 				EB800A0A1B0E69E000E22E5F /* ParseCrashReporting.framework in Frameworks */,
 				EB8009F91B0E68FE00E22E5F /* Security.framework in Frameworks */,
 				EB800A091B0E69E000E22E5F /* Parse.framework in Frameworks */,
 				EB800A0B1B0E69E000E22E5F /* ParseFacebookUtils.framework in Frameworks */,
-				EB800A0D1B0E69E000E22E5F /* ParseUI.framework in Frameworks */,
 				EB8009F71B0E68F500E22E5F /* QuartzCore.framework in Frameworks */,
 				EB800A0C1B0E69E000E22E5F /* ParseFacebookUtilsV4.framework in Frameworks */,
+				7D16787B1B17D03F00396644 /* ParseCrashReporting.framework in Frameworks */,
+				7D16787A1B17D03F00396644 /* Parse.framework in Frameworks */,
 				EB8009F51B0E68EC00E22E5F /* MobileCoreServices.framework in Frameworks */,
 				EB8009F31B0E68E100E22E5F /* CoreLocation.framework in Frameworks */,
+				7D1678791B17D03F00396644 /* Bolts.framework in Frameworks */,
 				EB8009F11B0E68D800E22E5F /* CoreGraphics.framework in Frameworks */,
 				EB8009EF1B0E68CE00E22E5F /* CFNetwork.framework in Frameworks */,
 				EB8009ED1B0E68C300E22E5F /* AudioToolbox.framework in Frameworks */,
+				7D16787C1B17D03F00396644 /* ParseFacebookUtils.framework in Frameworks */,
+				5B46CB0D303CDCFF19A60C06 /* libPods-PhotoGeoCache.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +169,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA1AA381E7D29D607D396F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D1678721B17D03F00396644 /* parse-library-1.7.4 */,
+				5BAA190A3D5DD25ECDBAECA1 /* libPods-PhotoGeoCache.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D1678721B17D03F00396644 /* parse-library-1.7.4 */ = {
+			isa = PBXGroup;
+			children = (
+				7D1678731B17D03F00396644 /* Bolts.framework */,
+				7D1678741B17D03F00396644 /* Parse.framework */,
+				7D1678751B17D03F00396644 /* ParseCrashReporting.framework */,
+				7D1678761B17D03F00396644 /* ParseFacebookUtils.framework */,
+				7D1678771B17D03F00396644 /* ParseFacebookUtilsV4.framework */,
+				7D1678781B17D03F00396644 /* ParseUI.framework */,
+			);
+			path = "parse-library-1.7.4";
+			sourceTree = "<group>";
+		};
+		8C6A43A6F96F58465F4E9C04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D50E0BC9B546D36910903A7 /* Pods-PhotoGeoCache.debug.xcconfig */,
+				E92C51F56730005601E9F3CB /* Pods-PhotoGeoCache.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D02931491B0ADD05005175B1 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +214,8 @@
 				D02931541B0ADD05005175B1 /* PhotoGeoCache */,
 				D02931711B0ADD05005175B1 /* PhotoGeoCacheTests */,
 				D02931531B0ADD05005175B1 /* Products */,
+				8C6A43A6F96F58465F4E9C04 /* Pods */,
+				3BA1AA381E7D29D607D396F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,6 +310,8 @@
 				EB800A1B1B0E6BE200E22E5F /* PrimaryCollectionViewController.m */,
 				EB800A1D1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.h */,
 				EB800A1E1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.m */,
+				7D16785B1B17B0CF00396644 /* PictureFeedCollectionViewCell.h */,
+				7D16785C1B17B0CF00396644 /* PictureFeedCollectionViewCell.m */,
 			);
 			name = PrimaryCollectionView;
 			sourceTree = "<group>";
@@ -286,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D02931781B0ADD05005175B1 /* Build configuration list for PBXNativeTarget "PhotoGeoCache" */;
 			buildPhases = (
+				E02A862BDA09A0A15B0CCE32 /* Check Pods Manifest.lock */,
 				D029314E1B0ADD05005175B1 /* Sources */,
 				D029314F1B0ADD05005175B1 /* Frameworks */,
 				D02931501B0ADD05005175B1 /* Resources */,
+				8BD5FD3548F43694E1754FB2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -374,12 +433,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8BD5FD3548F43694E1754FB2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoGeoCache/Pods-PhotoGeoCache-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E02A862BDA09A0A15B0CCE32 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D029314E1B0ADD05005175B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EB800A1F1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.m in Sources */,
+				7D16785D1B17B0CF00396644 /* PictureFeedCollectionViewCell.m in Sources */,
 				EB800A101B0E6B6C00E22E5F /* User.m in Sources */,
 				EB800A1C1B0E6BE200E22E5F /* PrimaryCollectionViewController.m in Sources */,
 				D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */,
@@ -513,28 +606,36 @@
 		};
 		D02931791B0ADD05005175B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D50E0BC9B546D36910903A7 /* Pods-PhotoGeoCache.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PhotoGeoCache",
+					"$(PROJECT_DIR)/Pods/parse-library-1.7.4",
+					"$(PROJECT_DIR)/parse-library-1.7.4",
 				);
 				INFOPLIST_FILE = PhotoGeoCache/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		D029317A1B0ADD05005175B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E92C51F56730005601E9F3CB /* Pods-PhotoGeoCache.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PhotoGeoCache",
+					"$(PROJECT_DIR)/Pods/parse-library-1.7.4",
+					"$(PROJECT_DIR)/parse-library-1.7.4",
 				);
 				INFOPLIST_FILE = PhotoGeoCache/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UIKit;
 
-@interface PrimaryCollectionViewControllerDataSource : NSObject
+@interface PrimaryCollectionViewControllerDataSource : NSObject <UICollectionViewDataSource>
 
 @end
