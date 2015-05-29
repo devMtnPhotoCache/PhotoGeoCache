@@ -22,6 +22,7 @@
 		D02931661B0ADD05005175B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02931651B0ADD05005175B1 /* Images.xcassets */; };
 		D02931691B0ADD05005175B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02931671B0ADD05005175B1 /* LaunchScreen.xib */; };
 		D02931751B0ADD05005175B1 /* PhotoGeoCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931741B0ADD05005175B1 /* PhotoGeoCacheTests.m */; };
+		D05E2E111B18DC3600BE63BA /* CacheDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2E101B18DC3600BE63BA /* CacheDetailViewController.m */; };
 		EB8009ED1B0E68C300E22E5F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8009EC1B0E68C300E22E5F /* AudioToolbox.framework */; };
 		EB8009EF1B0E68CE00E22E5F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8009EE1B0E68CE00E22E5F /* CFNetwork.framework */; };
 		EB8009F11B0E68D800E22E5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8009F01B0E68D800E22E5F /* CoreGraphics.framework */; };
@@ -42,7 +43,6 @@
 		EB800A161B0E6B8C00E22E5F /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A151B0E6B8C00E22E5F /* Cache.m */; };
 		EB800A191B0E6B9A00E22E5F /* Rating.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A181B0E6B9A00E22E5F /* Rating.m */; };
 		EB800A1C1B0E6BE200E22E5F /* PrimaryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A1B1B0E6BE200E22E5F /* PrimaryCollectionViewController.m */; };
-		EB800A221B0E6C4000E22E5F /* CacheDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */; };
 		EB800A251B0E6C4D00E22E5F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A241B0E6C4D00E22E5F /* MapViewController.m */; };
 		EB800A281B0E6C6300E22E5F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A271B0E6C6300E22E5F /* CameraViewController.m */; };
 		EB800A2B1B0E6C7F00E22E5F /* UserDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */; };
@@ -86,6 +86,8 @@
 		D029316E1B0ADD05005175B1 /* PhotoGeoCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGeoCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02931731B0ADD05005175B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02931741B0ADD05005175B1 /* PhotoGeoCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoGeoCacheTests.m; sourceTree = "<group>"; };
+		D05E2E0F1B18DC3600BE63BA /* CacheDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheDetailViewController.h; sourceTree = "<group>"; };
+		D05E2E101B18DC3600BE63BA /* CacheDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDetailViewController.m; sourceTree = "<group>"; };
 		E92C51F56730005601E9F3CB /* Pods-PhotoGeoCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGeoCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoGeoCache/Pods-PhotoGeoCache.release.xcconfig"; sourceTree = "<group>"; };
 		EB8009EC1B0E68C300E22E5F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EB8009EE1B0E68CE00E22E5F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -114,12 +116,6 @@
 		EB800A181B0E6B9A00E22E5F /* Rating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Rating.m; path = ../Rating.m; sourceTree = "<group>"; };
 		EB800A1A1B0E6BE200E22E5F /* PrimaryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimaryCollectionViewController.h; path = ../PrimaryCollectionViewController.h; sourceTree = "<group>"; };
 		EB800A1B1B0E6BE200E22E5F /* PrimaryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrimaryCollectionViewController.m; path = ../PrimaryCollectionViewController.m; sourceTree = "<group>"; };
-		EB800A1D1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimaryCollectionViewControllerDataSource.h; path = ../PrimaryCollectionViewControllerDataSource.h; sourceTree = "<group>"; };
-		EB800A1E1B0E6C0100E22E5F /* PrimaryCollectionViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrimaryCollectionViewControllerDataSource.m; path = ../PrimaryCollectionViewControllerDataSource.m; sourceTree = "<group>"; };
-		EB800A201B0E6C4000E22E5F /* CacheDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CacheDetailViewController.h; path = ../CacheDetailViewController.h; sourceTree = "<group>"; };
-		EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CacheDetailViewController.m; path = ../CacheDetailViewController.m; sourceTree = "<group>"; };
-		EB800A201B0E6C4000E22E5F /* CacheDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheDetailViewController.h; sourceTree = "<group>"; };
-		EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDetailViewController.m; sourceTree = "<group>"; };
 		EB800A231B0E6C4D00E22E5F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ../MapViewController.h; sourceTree = "<group>"; };
 		EB800A241B0E6C4D00E22E5F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ../MapViewController.m; sourceTree = "<group>"; };
 		EB800A261B0E6C6300E22E5F /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = ../CameraViewController.h; sourceTree = "<group>"; };
@@ -234,8 +230,8 @@
 				D029315A1B0ADD05005175B1 /* AppDelegate.m */,
 				EB800A391B0E736800E22E5F /* ViewController.h */,
 				EB800A3A1B0E736800E22E5F /* ViewController.m */,
-				EB800A201B0E6C4000E22E5F /* CacheDetailViewController.h */,
-				EB800A211B0E6C4000E22E5F /* CacheDetailViewController.m */,
+				D05E2E0F1B18DC3600BE63BA /* CacheDetailViewController.h */,
+				D05E2E101B18DC3600BE63BA /* CacheDetailViewController.m */,
 				EB800A291B0E6C7F00E22E5F /* UserDataController.h */,
 				EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */,
 				EB800A2F1B0E6D4F00E22E5F /* CreateAChallengeViewController.h */,
@@ -484,8 +480,8 @@
 				EB800A101B0E6B6C00E22E5F /* User.m in Sources */,
 				EB800A1C1B0E6BE200E22E5F /* PrimaryCollectionViewController.m in Sources */,
 				D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */,
+				D05E2E111B18DC3600BE63BA /* CacheDetailViewController.m in Sources */,
 				EB800A131B0E6B8000E22E5F /* FoundCacheObject.m in Sources */,
-				EB800A221B0E6C4000E22E5F /* CacheDetailViewController.m in Sources */,
 				7D1678841B18CEEA00396644 /* PrimaryCollectionViewDataSource.m in Sources */,
 				D02931581B0ADD05005175B1 /* main.m in Sources */,
 				EB800A191B0E6B9A00E22E5F /* Rating.m in Sources */,
