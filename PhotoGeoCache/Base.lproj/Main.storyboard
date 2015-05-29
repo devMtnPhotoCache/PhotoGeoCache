@@ -85,7 +85,59 @@
                     <view key="view" contentMode="scaleToFill" id="wku-iP-R7P">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-Nr-lzw">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5L-02-LTG">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="1142"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N3C-6N-H1h">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="600"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="1Sl-CU-18I"/>
+                                                    <constraint firstAttribute="height" constant="600" id="dQ3-hm-nd6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a9-Qg-zdL">
+                                                <rect key="frame" x="8" y="608" width="85.5" height="144"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="144" id="g5M-fR-jmK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="3a9-Qg-zdL" secondAttribute="trailing" constant="8" id="M8r-Wg-Krc"/>
+                                            <constraint firstAttribute="trailing" secondItem="N3C-6N-H1h" secondAttribute="trailing" id="MLm-HT-Gng"/>
+                                            <constraint firstAttribute="trailing" secondItem="N3C-6N-H1h" secondAttribute="trailing" id="OEa-ex-lcD"/>
+                                            <constraint firstItem="3a9-Qg-zdL" firstAttribute="top" secondItem="N3C-6N-H1h" secondAttribute="bottom" constant="8" id="VLS-hw-8Ne"/>
+                                            <constraint firstAttribute="height" constant="1142" id="YA4-bU-z0L"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3a9-Qg-zdL" secondAttribute="trailing" constant="8" id="ZH1-aR-f17"/>
+                                            <constraint firstItem="N3C-6N-H1h" firstAttribute="leading" secondItem="j5L-02-LTG" secondAttribute="leading" id="eDl-tI-gZa"/>
+                                            <constraint firstItem="N3C-6N-H1h" firstAttribute="top" secondItem="j5L-02-LTG" secondAttribute="top" id="u6P-H4-Pv1"/>
+                                            <constraint firstItem="3a9-Qg-zdL" firstAttribute="leading" secondItem="j5L-02-LTG" secondAttribute="leading" constant="8" id="za7-ci-ia3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="j5L-02-LTG" firstAttribute="top" secondItem="kEU-Nr-lzw" secondAttribute="top" id="6Iu-il-iA7"/>
+                                    <constraint firstAttribute="trailing" secondItem="j5L-02-LTG" secondAttribute="trailing" id="6nN-gZ-iZA"/>
+                                    <constraint firstItem="j5L-02-LTG" firstAttribute="leading" secondItem="kEU-Nr-lzw" secondAttribute="leading" id="WJI-hK-bfW"/>
+                                    <constraint firstAttribute="height" constant="600" id="Yg6-qr-tWf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kEU-Nr-lzw" firstAttribute="top" secondItem="wku-iP-R7P" secondAttribute="topMargin" id="LPO-gw-CFs"/>
+                            <constraint firstItem="kEU-Nr-lzw" firstAttribute="leading" secondItem="wku-iP-R7P" secondAttribute="leadingMargin" constant="-16" id="OKo-hH-CpC"/>
+                            <constraint firstItem="9hE-rV-bFE" firstAttribute="top" secondItem="kEU-Nr-lzw" secondAttribute="bottom" id="mL1-Rq-zeA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kEU-Nr-lzw" secondAttribute="trailing" constant="-16" id="y6y-ss-lr9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kk-BL-gy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
