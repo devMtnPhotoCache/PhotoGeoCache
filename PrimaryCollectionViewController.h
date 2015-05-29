@@ -9,6 +9,6 @@
 
 @import UIKit;
 
-@interface PrimaryCollectionViewController : UIViewController 
+@interface PrimaryCollectionViewController : UICollectionViewController
 
 @end
