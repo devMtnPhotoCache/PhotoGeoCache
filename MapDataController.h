@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface MapDataController : NSObject
+
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, readonly) CLLocationDegrees *cacheLocationLatitude;
+@property (nonatomic, readonly) CLLocationDegrees *cacheLocationLongitude;
+
++ (instancetype)sharedInstance;
+
+- (CLLocationCoordinate2D)getRandomizedSearchCircle:(CLLocation *)cacheLocation;
 
 @end

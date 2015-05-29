@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B46CB0D303CDCFF19A60C06 /* libPods-PhotoGeoCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAA190A3D5DD25ECDBAECA1 /* libPods-PhotoGeoCache.a */; };
+		76AEABF61B1906D400145F3B /* CacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AEABF51B1906D400145F3B /* CacheModel.m */; };
+		76AEABF81B19071400145F3B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76AEABF71B19071400145F3B /* MapKit.framework */; };
 		7D16785D1B17B0CF00396644 /* PictureFeedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D16785C1B17B0CF00396644 /* PictureFeedCollectionViewCell.m */; };
 		7D1678791B17D03F00396644 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678731B17D03F00396644 /* Bolts.framework */; };
 		7D16787A1B17D03F00396644 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678741B17D03F00396644 /* Parse.framework */; };
@@ -64,6 +66,9 @@
 
 /* Begin PBXFileReference section */
 		5BAA190A3D5DD25ECDBAECA1 /* libPods-PhotoGeoCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoGeoCache.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76AEABF41B1906D400145F3B /* CacheModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheModel.h; sourceTree = "<group>"; };
+		76AEABF51B1906D400145F3B /* CacheModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheModel.m; sourceTree = "<group>"; };
+		76AEABF71B19071400145F3B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7D16785B1B17B0CF00396644 /* PictureFeedCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureFeedCollectionViewCell.h; sourceTree = "<group>"; };
 		7D16785C1B17B0CF00396644 /* PictureFeedCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureFeedCollectionViewCell.m; sourceTree = "<group>"; };
 		7D1678731B17D03F00396644 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -137,6 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76AEABF81B19071400145F3B /* MapKit.framework in Frameworks */,
+				EB8009F31B0E68E100E22E5F /* CoreLocation.framework in Frameworks */,
 				7D16787E1B17D03F00396644 /* ParseUI.framework in Frameworks */,
 				EB800A011B0E693700E22E5F /* libsqlite3.dylib in Frameworks */,
 				EB8009FF1B0E692C00E22E5F /* libz.dylib in Frameworks */,
@@ -152,7 +159,6 @@
 				7D16787B1B17D03F00396644 /* ParseCrashReporting.framework in Frameworks */,
 				7D16787A1B17D03F00396644 /* Parse.framework in Frameworks */,
 				EB8009F51B0E68EC00E22E5F /* MobileCoreServices.framework in Frameworks */,
-				EB8009F31B0E68E100E22E5F /* CoreLocation.framework in Frameworks */,
 				7D1678791B17D03F00396644 /* Bolts.framework in Frameworks */,
 				EB8009F11B0E68D800E22E5F /* CoreGraphics.framework in Frameworks */,
 				EB8009EF1B0E68CE00E22E5F /* CFNetwork.framework in Frameworks */,
@@ -175,6 +181,7 @@
 		3BA1AA381E7D29D607D396F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76AEABF71B19071400145F3B /* MapKit.framework */,
 				7D1678721B17D03F00396644 /* parse-library-1.7.4 */,
 				5BAA190A3D5DD25ECDBAECA1 /* libPods-PhotoGeoCache.a */,
 			);
@@ -304,6 +311,8 @@
 				EB800A181B0E6B9A00E22E5F /* Rating.m */,
 				EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */,
 				EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */,
+				76AEABF41B1906D400145F3B /* CacheModel.h */,
+				76AEABF51B1906D400145F3B /* CacheModel.m */,
 			);
 			name = ParseThings;
 			sourceTree = "<group>";
@@ -490,6 +499,7 @@
 				EB800A3B1B0E736800E22E5F /* ViewController.m in Sources */,
 				EB800A161B0E6B8C00E22E5F /* Cache.m in Sources */,
 				EB800A2B1B0E6C7F00E22E5F /* UserDataController.m in Sources */,
+				76AEABF61B1906D400145F3B /* CacheModel.m in Sources */,
 				EB800A2E1B0E6D3C00E22E5F /* ParseLoginViewController.m in Sources */,
 				EB800A251B0E6C4D00E22E5F /* MapViewController.m in Sources */,
 				EB800A311B0E6D4F00E22E5F /* CreateAChallengeViewController.m in Sources */,
