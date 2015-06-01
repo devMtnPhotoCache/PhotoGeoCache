@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IsV-ls-FUg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IsV-ls-FUg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -27,17 +27,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MbW-wX-6Oq">
-                                            <rect key="frame" x="9" y="9" width="32" height="32"/>
+                                            <rect key="frame" x="1" y="1" width="48" height="48"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="MbW-wX-6Oq" secondAttribute="bottom" constant="1" id="YmY-lM-yMq"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="MbW-wX-6Oq" secondAttribute="trailing" constant="1" id="cL8-OD-Z7k"/>
-                                    <constraint firstItem="MbW-wX-6Oq" firstAttribute="top" secondItem="w5j-6M-GoE" secondAttribute="topMargin" constant="1" id="eyg-6a-fDc"/>
-                                    <constraint firstItem="MbW-wX-6Oq" firstAttribute="leading" secondItem="w5j-6M-GoE" secondAttribute="leadingMargin" constant="1" id="rFL-6M-kbq"/>
+                                    <constraint firstItem="MbW-wX-6Oq" firstAttribute="leading" secondItem="w5j-6M-GoE" secondAttribute="leading" constant="1" id="Ak5-5m-dga"/>
+                                    <constraint firstAttribute="bottom" secondItem="MbW-wX-6Oq" secondAttribute="bottom" constant="1" id="Wkj-T6-1sF"/>
+                                    <constraint firstAttribute="trailing" secondItem="MbW-wX-6Oq" secondAttribute="trailing" constant="1" id="pQe-6b-saE"/>
+                                    <constraint firstItem="MbW-wX-6Oq" firstAttribute="top" secondItem="w5j-6M-GoE" secondAttribute="top" constant="1" id="t9U-fE-eeZ"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="MbW-wX-6Oq" id="an5-tI-nu8"/>
