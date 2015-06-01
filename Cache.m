@@ -18,4 +18,16 @@
 @dynamic type;
 @dynamic addedByUser;
 
+//****Sample Location Code for debugging! Will use Parse data for Cache objects.*****
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.location = [[CLLocation alloc] initWithLatitude:40.7708 longitude:-111.8920];
+        
+    }
+    return self;
+}
+
+
 @end

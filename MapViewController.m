@@ -12,6 +12,7 @@
 
 #import "MapViewController.h"
 #import "MapDataController.h"
+#import "Cache.h"
 
 
 @interface UIViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
@@ -19,7 +20,9 @@
 @property (nonatomic) MKUserLocation *userLocation;
 @property (nonatomic) BOOL showsUserLocation;
 @property (nonatomic) BOOL userLocationUpdated;
+@property (nonatomic) BOOL didAddOverlayRenderer;
 @property (nonatomic) CLLocation *cacheLocation;
+@property (nonatomic) CLLocationCoordinate2D circleCenter;
 
 
 @end
@@ -30,8 +33,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    MKUserTrackingBarButtonItem *buttonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
-    self.navigationItem.rightBarButtonItem = buttonItem;
+    MKUserTrackingBarButtonItem *userTrackerButton = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+    
+    UIBarButtonItem *displayCacheCircleButton = [[UIBarButtonItem alloc] initWithTitle:@"Show Cache"
+                                                                                 style:UIBarButtonItemStylePlain
+                                                                                target:(self)
+                                                                                action:@selector(displayCacheCircle)];
+    
+    self.navigationItem.rightBarButtonItems = @[userTrackerButton, displayCacheCircleButton];
     
     [self.mapView setShowsUserLocation:YES];
     
@@ -44,6 +53,12 @@
     }
     
 #pragma  - Playing with coordinates, drawing a circle
+    
+    Cache *currentCache = [Cache new];
+    
+    self.cacheLocation = currentCache.location;
+    
+    self.circleCenter = [[MapDataController sharedInstance] getRandomizedSearchCircle:self.cacheLocation];
     
     //make a circle and give it coordinates
     MKCircle *circle = [MKCircle circleWithCenterCoordinate:[[MapDataController sharedInstance] getRandomizedSearchCircle:(self.cacheLocation)] radius: .5*METERS_MILE];
@@ -72,6 +87,17 @@
     }
 }
 
+- (void) mapView:(MKMapView *)mapView didAddOverlayRenderers:(NSArray *)renderers {
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.circleCenter, 2*METERS_MILE, 2*METERS_MILE);
+    
+    if (!self.didAddOverlayRenderer) {
+        [self.mapView setRegion:viewRegion animated:YES];
+        self.didAddOverlayRenderer = YES;
+    }
+    
+}
+
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView
             rendererForOverlay:(id<MKOverlay>)overlay{
     
@@ -83,6 +109,14 @@
     
     return circleRenderer;
     
+}
+
+- (void)displayCacheCircle {
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.circleCenter, 2*METERS_MILE, 2*METERS_MILE);
+    
+    [self.mapView setRegion:viewRegion animated:YES];
+    self.didAddOverlayRenderer = YES;
 }
 
 
