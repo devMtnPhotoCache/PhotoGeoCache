@@ -8,7 +8,7 @@
 
 #import "User.h"
 
-@implementation User
+@implementation User 
 
 @dynamic Username;
 @dynamic password;
@@ -18,4 +18,12 @@
 @dynamic realName;
 @dynamic friends;
 
++ (NSString *)parseClassName {
+    
+    return @"User";
+}
+
++ (void)load {
+    [self registerSubclass];
+}
 @end

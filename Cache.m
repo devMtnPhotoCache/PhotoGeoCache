@@ -19,6 +19,17 @@
 @dynamic addedByUser;
 
 //****Sample Location Code for debugging! Will use Parse data for Cache objects.*****
+
++ (NSString *)parseClassName {
+    
+    return @"Cache";
+}
+
++ (void)load {
+    [self registerSubclass];
+}
+
+
 - (instancetype)init
 {
     self = [super init];

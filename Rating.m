@@ -15,4 +15,12 @@
 @dynamic CacheName;
 @dynamic date;
 
++ (NSString *)parseClassName {
+    return @"rating";
+}
+
++ (void)load {
+    [self registerSubclass];
+}
+
 @end

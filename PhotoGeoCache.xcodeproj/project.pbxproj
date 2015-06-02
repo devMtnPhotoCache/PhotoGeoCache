@@ -18,6 +18,7 @@
 		7D16787D1B17D03F00396644 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678771B17D03F00396644 /* ParseFacebookUtilsV4.framework */; };
 		7D16787E1B17D03F00396644 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678781B17D03F00396644 /* ParseUI.framework */; };
 		7D1678841B18CEEA00396644 /* PrimaryCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1678831B18CEEA00396644 /* PrimaryCollectionViewDataSource.m */; };
+		7DCC56201B1E41FB002A1329 /* CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC561F1B1E41FB002A1329 /* CacheController.m */; };
 		7DDFFB751B1D13CD00A2B9F6 /* PictureFeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDFFB741B1D13CD00A2B9F6 /* PictureFeedController.m */; };
 		D02931581B0ADD05005175B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931571B0ADD05005175B1 /* main.m */; };
 		D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D029315A1B0ADD05005175B1 /* AppDelegate.m */; };
@@ -80,6 +81,8 @@
 		7D1678781B17D03F00396644 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		7D1678821B18CEEA00396644 /* PrimaryCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimaryCollectionViewDataSource.h; sourceTree = "<group>"; };
 		7D1678831B18CEEA00396644 /* PrimaryCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimaryCollectionViewDataSource.m; sourceTree = "<group>"; };
+		7DCC561E1B1E41FB002A1329 /* CacheController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheController.h; sourceTree = "<group>"; };
+		7DCC561F1B1E41FB002A1329 /* CacheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheController.m; sourceTree = "<group>"; };
 		7DDFFB731B1D13CD00A2B9F6 /* PictureFeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureFeedController.h; sourceTree = "<group>"; };
 		7DDFFB741B1D13CD00A2B9F6 /* PictureFeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureFeedController.m; sourceTree = "<group>"; };
 		9D50E0BC9B546D36910903A7 /* Pods-PhotoGeoCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGeoCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoGeoCache/Pods-PhotoGeoCache.debug.xcconfig"; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 				EB800A121B0E6B8000E22E5F /* FoundCacheObject.m */,
 				EB800A141B0E6B8C00E22E5F /* Cache.h */,
 				EB800A151B0E6B8C00E22E5F /* Cache.m */,
+				7DCC561E1B1E41FB002A1329 /* CacheController.h */,
+				7DCC561F1B1E41FB002A1329 /* CacheController.m */,
 				EB800A171B0E6B9A00E22E5F /* Rating.h */,
 				EB800A181B0E6B9A00E22E5F /* Rating.m */,
 				EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */,
@@ -498,6 +503,7 @@
 				EB800A131B0E6B8000E22E5F /* FoundCacheObject.m in Sources */,
 				7D1678841B18CEEA00396644 /* PrimaryCollectionViewDataSource.m in Sources */,
 				7DDFFB751B1D13CD00A2B9F6 /* PictureFeedController.m in Sources */,
+				7DCC56201B1E41FB002A1329 /* CacheController.m in Sources */,
 				D02931581B0ADD05005175B1 /* main.m in Sources */,
 				EB800A191B0E6B9A00E22E5F /* Rating.m in Sources */,
 				EB800A281B0E6C6300E22E5F /* CameraViewController.m in Sources */,

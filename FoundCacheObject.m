@@ -16,4 +16,11 @@
 @dynamic pointValue;
 @dynamic photo;
 
++ (NSString *)parseClassName {
+    return @"foundCache";
+}
+
++ (void)load {
+    [self registerSubclass];
+}
 @end

@@ -8,11 +8,13 @@
 
 #import <Parse/Parse.h>
 
-@interface Rating : PFObject
+@interface Rating : PFObject <PFSubclassing>
 
 @property (nonatomic, assign) int starValue;
 @property (nonatomic, strong) NSString *UserThatLeftRating;
 @property (nonatomic, strong) NSString *CacheName;
 @property (nonatomic, strong) NSDate *date;
+
++ (NSString *)parseClassName;
 
 @end

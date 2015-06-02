@@ -8,7 +8,7 @@
 
 #import <Parse/Parse.h>
 
-@interface User : PFObject
+@interface User : PFObject <PFSubclassing>
 
 @property (nonatomic, strong) NSString *Username;
 @property (nonatomic, strong) NSString *password;
@@ -17,6 +17,8 @@
 @property (nonatomic, strong) PFFile *profilePicture;
 @property (nonatomic, strong) NSString *realName;
 @property (nonatomic, strong) NSArray *friends;
+
++ (NSString *)parseClassName;
 
 @end
 

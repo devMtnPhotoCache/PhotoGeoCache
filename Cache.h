@@ -8,7 +8,7 @@
 
 #import <Parse/Parse.h>
 
-@interface Cache : PFObject
+@interface Cache : PFObject <PFSubclassing>
 
 @property (nonatomic, strong) CLLocation *location;
 @property (nonatomic, strong) PFFile *photo;
@@ -17,5 +17,7 @@
 @property (nonatomic, strong) NSString *difficultySetting;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *addedByUser;
+
++ (NSString *)parseClassName;
 
 @end
