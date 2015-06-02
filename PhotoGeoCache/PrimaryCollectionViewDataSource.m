@@ -31,28 +31,29 @@
     switch (indexPath.item % 6)
     {
         case 0:
-            cell.imageView.backgroundColor = [UIColor redColor];
+            cell.imageView.image = [UIImage imageNamed:@"nightdrive"];
             break;
         case 1:
-            cell.imageView.backgroundColor = [UIColor orangeColor];
+            cell.imageView.image = [UIImage imageNamed:@"clouds"];
             break;
         case 2:
-            cell.imageView.backgroundColor = [UIColor yellowColor];
+            cell.imageView.image = [UIImage imageNamed:@"ghosted"];
             break;
         case 3:
-            cell.imageView.backgroundColor = [UIColor greenColor];
+            cell.imageView.image = [UIImage imageNamed:@"lake"];
             break;
         case 4:
-            cell.imageView.backgroundColor = [UIColor blueColor];
+            cell.imageView.image = [UIImage imageNamed:@"night"];
             break;
         case 5:
-            cell.imageView.backgroundColor = [UIColor purpleColor];
+            cell.imageView.image = [UIImage imageNamed:@"mountainside"];
             break;
         default:
             break;
     }
     
     cell.backgroundColor = [UIColor blackColor];
+    
     
     return cell;
 }

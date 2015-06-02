@@ -29,7 +29,7 @@
     
 //    self.collectionView.collectionViewLayout = self;
     
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    //self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
 
@@ -55,6 +55,8 @@
 {
     return 0;
 }
+
+
 
 
 /*
