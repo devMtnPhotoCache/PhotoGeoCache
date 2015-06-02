@@ -32,5 +32,41 @@
     }];
 }
 
+- (NSArray *)caches {
+    
+    PFQuery *query = [Cache query];
+    [query fromLocalDatastore];
+    return [query findObjects];
+}
+
+- (void)addCacheWithInfo:(CLLocation *)location photo:(PFFile *)photo rating:(NSNumber *)rating difficultyRating: (NSNumber *)difficultyRating difficultySetting:(NSString *)difficultySetting type:(NSString *)type addedByUser:(NSString *)addedByUser {
+    
+    Cache *cache = [Cache object];
+    
+    cache.location = location;
+    cache.photo = photo;
+    cache.rating = rating;
+    cache.difficultyRating = difficultyRating;
+    cache.difficultySetting = difficultySetting;
+    cache.type = type;
+    cache.addedByUser = addedByUser;
+    
+    [cache pinInBackground];
+    [cache save];
+}
+
+- (void)removeCache:(Cache *)cache {
+    
+    [cache unpinInBackground];
+    [cache deleteInBackground];
+}
+
+- (void)addCache:(Cache *)cache {
+    
+    [cache pinInBackground];
+    [cache save];
+}
+
+
 
 @end

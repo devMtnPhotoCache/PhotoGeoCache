@@ -12,8 +12,8 @@
 
 @property (nonatomic, strong) CLLocation *location;
 @property (nonatomic, strong) PFFile *photo;
-@property (nonatomic, assign) int rating;
-@property (nonatomic, assign) int difficultyRating;
+@property (nonatomic, assign) NSNumber *rating;
+@property (nonatomic, assign) NSNumber *difficultyRating;
 @property (nonatomic, strong) NSString *difficultySetting;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *addedByUser;
