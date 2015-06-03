@@ -13,5 +13,7 @@
 
 + (CacheController *)sharedInstance;
 
+- (NSArray *)caches;
+- (void)addCacheWithInfo:(CLLocation *)location photo:(UIImage *)photo rating:(NSNumber *)rating difficultyRating: (NSNumber *)difficultyRating difficultySetting:(NSString *)difficultySetting type:(NSString *)type addedByUser:(NSString *)addedByUser;
 
 @end

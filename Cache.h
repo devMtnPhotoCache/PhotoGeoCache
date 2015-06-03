@@ -10,7 +10,7 @@
 
 @interface Cache : PFObject <PFSubclassing>
 
-@property (nonatomic, strong) CLLocation *location;
+@property (nonatomic, strong) PFGeoPoint *location;
 @property (nonatomic, strong) PFFile *photo;
 @property (nonatomic, assign) NSNumber *rating;
 @property (nonatomic, assign) NSNumber *difficultyRating;

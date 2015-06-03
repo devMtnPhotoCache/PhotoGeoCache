@@ -8,6 +8,7 @@
 
 #import "PrimaryCollectionViewController.h"
 #import "PictureFeedCollectionViewCell.h"
+#import "CacheController.h"
 
 @interface PrimaryCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -19,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [[CacheController sharedInstance]addCacheWithInfo:nil photo:[UIImage imageNamed:@"clouds"] rating:@3 difficultyRating:@3 difficultySetting:@"Hard" type:@"Urban" addedByUser:@"Jake"];
+    
     // Do any additional setup after loading the view.
     
 //    UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];

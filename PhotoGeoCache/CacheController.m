@@ -39,12 +39,20 @@
     return [query findObjects];
 }
 
-- (void)addCacheWithInfo:(CLLocation *)location photo:(PFFile *)photo rating:(NSNumber *)rating difficultyRating: (NSNumber *)difficultyRating difficultySetting:(NSString *)difficultySetting type:(NSString *)type addedByUser:(NSString *)addedByUser {
+- (void)addCacheWithInfo:(CLLocation *)location photo:(UIImage *)photo rating:(NSNumber *)rating difficultyRating: (NSNumber *)difficultyRating difficultySetting:(NSString *)difficultySetting type:(NSString *)type addedByUser:(NSString *)addedByUser {
     
     Cache *cache = [Cache object];
     
-    cache.location = location;
-    cache.photo = photo;
+    if (photo) {
+        PFFile *imagePhoto = [PFFile fileWithData:UIImageJPEGRepresentation(photo, 0.95)];
+        cache.photo = imagePhoto;
+    }
+    
+    if (location) {
+        PFGeoPoint *geoLocation = [PFGeoPoint geoPointWithLocation:location];
+        cache.location = geoLocation;
+    }
+    
     cache.rating = rating;
     cache.difficultyRating = difficultyRating;
     cache.difficultySetting = difficultySetting;

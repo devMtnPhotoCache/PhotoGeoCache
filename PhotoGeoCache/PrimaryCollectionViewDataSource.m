@@ -8,6 +8,8 @@
 
 #import "PrimaryCollectionViewDataSource.h"
 #import "PictureFeedCollectionViewCell.h"
+#import "CacheController.h"
+#import "Cache.h"
 
 @implementation PrimaryCollectionViewDataSource
 
@@ -27,7 +29,9 @@
                  cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     PictureFeedCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellID" forIndexPath:indexPath];
-    
+    Cache *cache = [CacheController sharedInstance].caches[indexPath.item];
+    cell.imageView.image = [UIImage imageWithData:cache.photo.getData];
+//
     switch (indexPath.item % 6)
     {
         case 0:
