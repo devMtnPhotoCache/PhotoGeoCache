@@ -59,19 +59,19 @@
     cache.type = type;
     cache.addedByUser = addedByUser;
     
-    [cache pinInBackground];
+  
     [cache save];
 }
 
 - (void)removeCache:(Cache *)cache {
     
-    [cache unpinInBackground];
+    
     [cache deleteInBackground];
 }
 
 - (void)addCache:(Cache *)cache {
     
-    [cache pinInBackground];
+ 
     [cache save];
 }
 
