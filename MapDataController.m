@@ -13,12 +13,14 @@
 #import "MapDataController.h"
 #import "ViewController.h"
 #import "CacheModel.h"
+@import UIKit;
 
 @interface MapDataController () <CLLocationManagerDelegate>
 
 @property (nonatomic) CLLocationDegrees *randomizedCacheLocationLatitude;
 @property (nonatomic) CLLocationDegrees *randomizedCacheLocationLongitude;
 @property (nonatomic) CLLocation *cacheLocation;
+@property (nonatomic) CLLocation *currentUserLocation;
 
 @end
 
@@ -67,15 +69,32 @@
     
 }
 
+//Sets class property currentUserLocation to the last logged location when a user moves
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    CLLocation *location = locations.lastObject;
     
-    CLLocationDistance distance = [location distanceFromLocation:self.cacheLocation];
+    self.currentUserLocation = locations.lastObject;
+    
+}
+
+//Convenience method to get distances between current user location and a passed in cache location
+- (CLLocationDistance)getDistance:(CLLocation *)cacheLocation {
+    
+    CLLocationDistance distance = [self.currentUserLocation distanceFromLocation:cacheLocation];
+    
+    return distance;
+}
+
+
+- (BOOL)canCompleteCache {
+    
+    CLLocationDistance distance = [self.currentUserLocation distanceFromLocation:self.cacheLocation];
     NSLog(@"%f", distance);
     
     if (distance < 10) {
-        NSLog(@"Congratulations");
-        
+        return YES;
+    } else {
+        return NO;
     }
 }
+
 @end

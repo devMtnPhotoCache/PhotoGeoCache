@@ -34,7 +34,7 @@
 {
     self = [super init];
     if (self) {
-        self.location = [[CLLocation alloc] initWithLatitude:40.7708 longitude:-111.8920];
+        
         
     }
     return self;
