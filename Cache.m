@@ -17,6 +17,7 @@
 @dynamic difficultySetting;
 @dynamic type;
 @dynamic addedByUser;
+@dynamic currentDistance;
 
 //****Sample Location Code for debugging! Will use Parse data for Cache objects.*****
 

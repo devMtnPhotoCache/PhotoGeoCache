@@ -23,4 +23,6 @@
 
 - (BOOL)canCompleteCache;
 
+- (CLLocationDistance)getDistance:(CLLocation *)cacheLocation;
+
 @end

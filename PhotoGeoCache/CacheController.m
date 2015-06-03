@@ -7,6 +7,8 @@
 //
 
 #import "CacheController.h"
+#import "MapDataController.h"
+
 
 @implementation CacheController
 
@@ -36,7 +38,19 @@
     
     PFQuery *query = [Cache query];
     [query fromLocalDatastore];
-    return [query findObjects];
+    
+    NSMutableArray *photoArray = [[query findObjects] mutableCopy]; // your mutable copy of the fetched objects
+    for (Cache *cache in photoArray) {
+        PFGeoPoint *location = cache.location;
+        CLLocation *photoLocation = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
+        CLLocationDistance feet = [[MapDataController sharedInstance] getDistance:photoLocation];
+        cache.currentDistance = feet;
+    
+    }
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"currentDistance" ascending:YES];
+    [photoArray sortUsingDescriptors:@[sort]];
+    
+    return photoArray;
 }
 
 - (void)addCacheWithInfo:(CLLocation *)location photo:(UIImage *)photo rating:(NSNumber *)rating difficultyRating: (NSNumber *)difficultyRating difficultySetting:(NSString *)difficultySetting type:(NSString *)type addedByUser:(NSString *)addedByUser {
@@ -59,19 +73,19 @@
     cache.type = type;
     cache.addedByUser = addedByUser;
     
-    [cache pinInBackground];
+    
     [cache save];
 }
 
 - (void)removeCache:(Cache *)cache {
     
-    [cache unpinInBackground];
+    
     [cache deleteInBackground];
 }
 
 - (void)addCache:(Cache *)cache {
     
-    [cache pinInBackground];
+  
     [cache save];
 }
 

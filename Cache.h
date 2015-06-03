@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *difficultySetting;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSString *addedByUser;
+@property (nonatomic, assign) double currentDistance;
 
 + (NSString *)parseClassName;
 
