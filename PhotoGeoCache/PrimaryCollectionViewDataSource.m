@@ -22,7 +22,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 12;
+    return [[CacheController sharedInstance].caches count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView

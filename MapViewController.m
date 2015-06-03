@@ -121,6 +121,7 @@
     self.didAddOverlayRenderer = YES;
 }
 
+# pragma - alerts
 - (void)cacheIncompleteAlert {
     
     UIAlertController *incompleteAlert = [UIAlertController alertControllerWithTitle:@"Too far from the cache!" message:@"Keep going! You can do it!" preferredStyle:UIAlertControllerStyleAlert];
@@ -140,14 +141,11 @@
     UIAlertAction *completeAction = [UIAlertAction actionWithTitle:@"Take a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
         CameraViewController *newCamera = [[CameraViewController alloc] init];
-        //        newCamera.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
         
         dispatch_async(dispatch_get_main_queue(), ^ {
-            //            [self presentViewController:newCamera animated:YES completion:nil];
-            [self presentViewController:newCamera animated:YES completion:nil];
+                [self presentViewController:newCamera animated:YES completion:nil];
         });
         
-        //        [self.navigationController presentViewController:newCamera animated:YES completion:nil];
     }];
     
     UIAlertAction *stayAction = [UIAlertAction actionWithTitle:@"Complete without a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
