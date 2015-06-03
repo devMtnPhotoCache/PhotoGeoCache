@@ -90,11 +90,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEU-Nr-lzw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5L-02-LTG">
-                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="1142"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5L-02-LTG">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1142"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N3C-6N-H1h">
-                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="600"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3C-6N-H1h">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="1Sl-CU-18I"/>
                                                     <constraint firstAttribute="height" constant="600" id="dQ3-hm-nd6"/>
