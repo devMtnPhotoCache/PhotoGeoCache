@@ -7,7 +7,6 @@
 //
 
 #import "CacheController.h"
-#import "MapDataController.h"
 
 
 @implementation CacheController
@@ -22,6 +21,18 @@
     });
     return sharedInstance;
 }
+
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [[MapDataController sharedInstance]setDelegate:self];
+        [[MapDataController sharedInstance].locationManager startUpdatingLocation];
+    }
+    return self;
+}
+
 
 - (void)loadCacheFromParse {
     

@@ -9,13 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+@protocol LocationControllerDelegate <NSObject>
+
+- (void)locationControllerDidUpdateLocation:(CLLocation *)location;
+
+@end
 
 @interface MapDataController : NSObject
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, readonly) CLLocationDegrees *cacheLocationLatitude;
 @property (nonatomic, readonly) CLLocationDegrees *cacheLocationLongitude;
-@property (nonatomic, readonly) CLLocation *currentUserLocation;
+@property (nonatomic, strong) CLLocation *location;
+
+@property (weak, nonatomic) id delegate;
 
 + (instancetype)sharedInstance;
 

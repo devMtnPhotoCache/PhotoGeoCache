@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Cache.h"
+#import "MapDataController.h"
 
 @interface CacheController : NSObject
 

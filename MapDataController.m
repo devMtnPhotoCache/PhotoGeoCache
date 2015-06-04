@@ -33,9 +33,9 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[MapDataController alloc] init];
         
-        sharedInstance.locationManager = [[CLLocationManager alloc] init];
-        
-        [sharedInstance.locationManager setDelegate:sharedInstance];
+//        sharedInstance.locationManager = [[CLLocationManager alloc] init];
+//        
+//        [sharedInstance.locationManager setDelegate:sharedInstance];
         
         CacheModel *currentCache = [CacheModel new];
         
@@ -45,16 +45,34 @@
         
 #pragma - Location Manager Setup
         
-        if ([sharedInstance.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-            [sharedInstance.locationManager requestWhenInUseAuthorization];
-        }
-        
-        [sharedInstance.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-        [sharedInstance.locationManager startUpdatingLocation];
+//        if ([sharedInstance.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+//            [sharedInstance.locationManager requestWhenInUseAuthorization];
+//        }
+//        
+//        [sharedInstance.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+//        [sharedInstance.locationManager startUpdatingLocation];
         
     });
     
     return sharedInstance;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+        
+        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [self.locationManager requestWhenInUseAuthorization];
+        }
+        
+        [self.locationManager startUpdatingLocation];
+    }
+    return self;
 }
 
 
@@ -72,14 +90,16 @@
 //Sets class property currentUserLocation to the last logged location when a user moves
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     
-    self.currentUserLocation = locations.lastObject;
+    [self.delegate locationControllerDidUpdateLocation:locations.lastObject];
+    [self setLocation:locations.lastObject];
+    //self.currentUserLocation = locations.lastObject;
     
 }
 
 //Convenience method to get distances between current user location and a passed in cache location
 - (CLLocationDistance)getDistance:(CLLocation *)cacheLocation {
     
-    CLLocationDistance distance = [self.currentUserLocation distanceFromLocation:cacheLocation];
+    CLLocationDistance distance = [self.location distanceFromLocation:cacheLocation];
     
     return distance;
 }
