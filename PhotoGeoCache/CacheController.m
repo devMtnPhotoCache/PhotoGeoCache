@@ -9,6 +9,11 @@
 #import "CacheController.h"
 #import "MapDataController.h"
 
+@interface CacheController ()
+
+@property (strong, nonatomic) CLLocation *currentLocation; //!!!to be used as part of dummy location. Remove when location manager is functional!!!
+
+@end
 
 @implementation CacheController
 
@@ -39,11 +44,13 @@
     PFQuery *query = [Cache query];
     [query fromLocalDatastore];
     
+    self.currentLocation = [[CLLocation alloc] initWithLatitude:40.7708 longitude:-111.892];
+    
     NSMutableArray *photoArray = [[query findObjects] mutableCopy]; // your mutable copy of the fetched objects
     for (Cache *cache in photoArray) {
         PFGeoPoint *location = cache.location;
         CLLocation *photoLocation = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
-        CLLocationDistance feet = [[MapDataController sharedInstance] getDistance:photoLocation];
+        CLLocationDistance feet = [self.currentLocation distanceFromLocation: photoLocation];
         cache.currentDistance = feet;
     
     }
