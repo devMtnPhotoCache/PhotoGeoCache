@@ -24,17 +24,6 @@
 }
 
 
-//- (instancetype)init
-//{
-//    self = [super init];
-//    if (self) {
-//        [[MapDataController sharedInstance]setDelegate:self];
-//        [[MapDataController sharedInstance].locationManager startUpdatingLocation];
-//    }
-//    return self;
-//}
-
-
 - (void)loadCacheFromParse {
     
     PFQuery *query = [Cache query];
@@ -46,24 +35,27 @@
     }];
 }
 
+
 - (NSArray *)caches {
+    
+    PFGeoPoint *userGeoPoint = [PFUser currentUser][@"location"];
     
     PFQuery *query = [Cache query];
     [query fromLocalDatastore];
+    [query whereKey:@"location" nearGeoPoint:userGeoPoint withinMiles:20];
+    query.limit = 20;
     
-    NSMutableArray *photoArray = [[query findObjects] mutableCopy]; // your mutable copy of the fetched objects
-    for (Cache *cache in photoArray) {
-        PFGeoPoint *location = cache.location;
-        CLLocation *photoLocation = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
-        CLLocationDistance feet = [[MapDataController sharedInstance] getDistance:photoLocation];
-        cache.currentDistance = feet;
-    
-    }
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"currentDistance" ascending:YES];
-    [photoArray sortUsingDescriptors:@[sort]];
+    NSMutableArray *photoArray = [[query findObjects] mutableCopy];
+    [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error){
+        if (!error) {
+                [[PFUser currentUser] setObject:geoPoint forKey:@"currentLocation"];
+                [[PFUser currentUser] saveInBackground];
+            }
+        }];
     
     return photoArray;
 }
+
 
 - (void)addCacheWithInfo:(CLLocation *)location photo:(UIImage *)photo rating:(NSNumber *)rating difficultyRating: (NSNumber *)difficultyRating difficultySetting:(NSString *)difficultySetting type:(NSString *)type addedByUser:(NSString *)addedByUser {
     

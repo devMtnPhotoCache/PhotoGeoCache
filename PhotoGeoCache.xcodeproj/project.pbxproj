@@ -411,6 +411,7 @@
 				TargetAttributes = {
 					D02931511B0ADD05005175B1 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CFVTXS6NX7;
 					};
 					D029316D1B0ADD05005175B1 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -637,6 +638,8 @@
 			baseConfigurationReference = 9D50E0BC9B546D36910903A7 /* Pods-PhotoGeoCache.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PhotoGeoCache",
@@ -647,6 +650,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -655,6 +659,8 @@
 			baseConfigurationReference = E92C51F56730005601E9F3CB /* Pods-PhotoGeoCache.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PhotoGeoCache",
@@ -665,6 +671,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

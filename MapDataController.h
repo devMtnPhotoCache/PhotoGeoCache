@@ -20,6 +20,7 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, readonly) CLLocationDegrees *cacheLocationLatitude;
 @property (nonatomic, readonly) CLLocationDegrees *cacheLocationLongitude;
+@property (nonatomic, assign) CLLocation *currentUserLocation;
 @property (nonatomic, strong) CLLocation *location;
 
 @property (weak, nonatomic) id delegate;

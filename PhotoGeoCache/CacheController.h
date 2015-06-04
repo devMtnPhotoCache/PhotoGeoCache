@@ -12,6 +12,8 @@
 
 @interface CacheController : NSObject
 
+@property (nonatomic, assign) PFGeoPoint *currentLocation;
+
 + (CacheController *)sharedInstance;
 
 - (NSArray *)caches;

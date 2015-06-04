@@ -20,7 +20,7 @@
 @property (nonatomic) CLLocationDegrees *randomizedCacheLocationLatitude;
 @property (nonatomic) CLLocationDegrees *randomizedCacheLocationLongitude;
 @property (nonatomic) CLLocation *cacheLocation;
-@property (nonatomic) CLLocation *currentUserLocation;
+//@property (nonatomic) CLLocation *currentUserLocation;
 @property (strong, nonatomic) NSMutableArray *observers;
 
 @end
@@ -114,7 +114,7 @@
     
     [self.delegate locationControllerDidUpdateLocation:locations.lastObject];
     [self setLocation:locations.lastObject];
-    //self.currentUserLocation = locations.lastObject;
+    self.currentUserLocation = locations.lastObject;
     
 }
 
