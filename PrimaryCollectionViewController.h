@@ -8,7 +8,10 @@
 
 
 @import UIKit;
+#import <CoreLocation/CoreLocation.h>
 
 @interface PrimaryCollectionViewController : UICollectionViewController
+
+@property (assign, nonatomic) CLLocation *currentLocation;
 
 @end

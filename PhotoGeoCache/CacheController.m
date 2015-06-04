@@ -7,6 +7,7 @@
 //
 
 #import "CacheController.h"
+#import "PrimaryCollectionViewController.h"
 
 
 @implementation CacheController
@@ -23,15 +24,15 @@
 }
 
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [[MapDataController sharedInstance]setDelegate:self];
-        [[MapDataController sharedInstance].locationManager startUpdatingLocation];
-    }
-    return self;
-}
+//- (instancetype)init
+//{
+//    self = [super init];
+//    if (self) {
+//        [[MapDataController sharedInstance]setDelegate:self];
+//        [[MapDataController sharedInstance].locationManager startUpdatingLocation];
+//    }
+//    return self;
+//}
 
 
 - (void)loadCacheFromParse {

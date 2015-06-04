@@ -9,14 +9,17 @@
 #import "PrimaryCollectionViewController.h"
 #import "PictureFeedCollectionViewCell.h"
 #import "CacheController.h"
+#import <CoreLocation/CoreLocation.h>
+#import "MapDataController.h"
 
-@interface PrimaryCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface PrimaryCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, LocationControllerDelegate>
 
 //@property (strong, nonatomic) PrimaryCollectionViewControllerDataSource *dataSource;
 
 @end
 
 @implementation PrimaryCollectionViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,7 +63,17 @@
     return 0;
 }
 
+- (void) locationControllerDidUpdateLocation:(CLLocation *)location {
+    self.currentLocation = location;
+}
 
+- (void) viewWillAppear:(BOOL)animated {
+    [[MapDataController sharedInstance] addLocationManagerDelegate:self];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [[MapDataController sharedInstance] removelocationManagerDelegate:self];
+}
 
 
 /*

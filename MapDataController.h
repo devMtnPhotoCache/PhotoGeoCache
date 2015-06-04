@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-@protocol LocationControllerDelegate <NSObject>
+@protocol LocationControllerDelegate
 
 - (void)locationControllerDidUpdateLocation:(CLLocation *)location;
 
 @end
 
-@interface MapDataController : NSObject
+@interface MapDataController : NSObject <LocationControllerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, readonly) CLLocationDegrees *cacheLocationLatitude;
@@ -25,6 +25,9 @@
 @property (weak, nonatomic) id delegate;
 
 + (instancetype)sharedInstance;
+
+- (void) addLocationManagerDelegate:(id<LocationControllerDelegate>) delegate;
+- (void) removelocationManagerDelegate:(id<LocationControllerDelegate>) delegate;
 
 - (CLLocationCoordinate2D)getRandomizedSearchCircle:(CLLocation *)cacheLocation;
 

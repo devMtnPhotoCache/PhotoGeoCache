@@ -21,6 +21,7 @@
 @property (nonatomic) CLLocationDegrees *randomizedCacheLocationLongitude;
 @property (nonatomic) CLLocation *cacheLocation;
 @property (nonatomic) CLLocation *currentUserLocation;
+@property (strong, nonatomic) NSMutableArray *observers;
 
 @end
 
@@ -57,22 +58,64 @@
     return sharedInstance;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
-        self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = self;
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        self.locationManager.distanceFilter = kCLDistanceFilterNone;
         
-        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-            [self.locationManager requestWhenInUseAuthorization];
+        CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+        if (status == kCLAuthorizationStatusRestricted && status == kCLAuthorizationStatusDenied) {
+        } else {
+            _locationManager = [[CLLocationManager alloc] init];
+            _locationManager.delegate = self;
+            _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         }
         
-        [self.locationManager startUpdatingLocation];
+        if (status == kCLAuthorizationStatusNotDetermined) {
+            if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+                [_locationManager requestWhenInUseAuthorization];
+            }
+        }
+        
+        _observers = [[NSMutableArray alloc] init];
+//        self.locationManager = [[CLLocationManager alloc] init];
+//        self.locationManager.delegate = self;
+//        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+//        self.locationManager.distanceFilter = kCLDistanceFilterNone;
+//        
+//        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+//            [self.locationManager requestWhenInUseAuthorization];
+//        }
+        
+//        [self.locationManager startUpdatingLocation];
     }
     return self;
+}
+
+- (void) locationControllerDidUpdateLocation:(CLLocation *)location {
+    self.currentUserLocation = location;
+}
+
+- (void) addLocationManagerDelegate:(id<LocationControllerDelegate>)delegate {
+    if (![self.observers containsObject:delegate]) {
+        [self.observers addObject:delegate];
+    }
+    [self.locationManager startUpdatingLocation];
+}
+
+- (void) removelocationManagerDelegate:(id<LocationControllerDelegate>)delegate {
+    if ([self.observers containsObject:delegate]) {
+        [self.observers removeObject:delegate];
+    }
+}
+
+
+//Sets class property currentUserLocation to the last logged location when a user moves
+- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    
+    [self.delegate locationControllerDidUpdateLocation:locations.lastObject];
+    [self setLocation:locations.lastObject];
+    //self.currentUserLocation = locations.lastObject;
+    
 }
 
 
@@ -87,14 +130,6 @@
     
 }
 
-//Sets class property currentUserLocation to the last logged location when a user moves
-- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    
-    [self.delegate locationControllerDidUpdateLocation:locations.lastObject];
-    [self setLocation:locations.lastObject];
-    //self.currentUserLocation = locations.lastObject;
-    
-}
 
 //Convenience method to get distances between current user location and a passed in cache location
 - (CLLocationDistance)getDistance:(CLLocation *)cacheLocation {
