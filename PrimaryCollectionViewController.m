@@ -11,6 +11,7 @@
 #import "CacheController.h"
 #import <CoreLocation/CoreLocation.h>
 #import "MapDataController.h"
+#import "CacheDetailViewController.h"
 
 
 
@@ -34,6 +35,11 @@
             [self.collectionView reloadData];
         }
     }];
+}
+
+- (void)test {
+    CacheDetailViewController *detailView = [[CacheDetailViewController alloc]init];
+    detailView.test
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,6 +83,7 @@
 
     
 }
+
 
 - (void) viewWillAppear:(BOOL)animated {
     [[MapDataController sharedInstance] addLocationManagerDelegate:self];

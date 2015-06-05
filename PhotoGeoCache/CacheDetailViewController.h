@@ -11,4 +11,6 @@
 
 @interface CacheDetailViewController : UIViewController
 
+@property (strong, nonatomic) NSString *test;
+
 @end
