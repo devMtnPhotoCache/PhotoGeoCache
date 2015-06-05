@@ -23,23 +23,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [[CacheController sharedInstance]addCacheWithInfo:nil photo:[UIImage imageNamed:@"clouds"] rating:@3 difficultyRating:@3 difficultySetting:@"Hard" type:@"Urban" addedByUser:@"Jake"];
     
-    // Do any additional setup after loading the view.
-    
-//    UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
-//    self.dataSource = [PrimaryCollectionViewControllerDataSource new];
-//    self.collectionView.collectionViewLayout = layout;
-//    self.collectionView.dataSource = self.dataSource;
-//    self.collectionView.delegate = self;
-    
-//    self.collectionView.collectionViewLayout = self;
-    
-    //self.collectionView.backgroundColor = [UIColor whiteColor];
+    [[CacheController sharedInstance] refreshCaches:^(BOOL empty) {
+        if (!empty) {
+            [self.collectionView reloadData];
+        }
+    }];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -64,7 +54,18 @@
 }
 
 - (void) locationControllerDidUpdateLocation:(CLLocation *)location {
-    self.currentLocation = location;
+
+    // THIS WILL RELOAD COLLECTION VIEW EVERY TIME THE PHONE MOVES 5 MILES
+    // YOU LIKELY WOULD BE BETTER OFF TO LET THE USER HIT RELOAD, OR ALERT
+    // THEM AND LET THEM DECIDE IF THEY WANT TO RELOAD
+    
+    [[CacheController sharedInstance] refreshCaches:^(BOOL empty) {
+        if (!empty) {
+            [self.collectionView reloadData];
+        }
+    }];
+
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {

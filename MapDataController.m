@@ -20,101 +20,82 @@
 @property (nonatomic) CLLocationDegrees *randomizedCacheLocationLatitude;
 @property (nonatomic) CLLocationDegrees *randomizedCacheLocationLongitude;
 @property (nonatomic) CLLocation *cacheLocation;
-//@property (nonatomic) CLLocation *currentUserLocation;
+
 @property (strong, nonatomic) NSMutableArray *observers;
 
 @end
 
 @implementation MapDataController
 
-+ (instancetype)sharedInstance
-{
++ (instancetype)sharedInstance {
     static MapDataController *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[MapDataController alloc] init];
         
-//        sharedInstance.locationManager = [[CLLocationManager alloc] init];
-//        
-//        [sharedInstance.locationManager setDelegate:sharedInstance];
-        
         CacheModel *currentCache = [CacheModel new];
         
         sharedInstance.cacheLocation = currentCache.cacheLocation;
-        
-        
-        
-#pragma - Location Manager Setup
-        
-//        if ([sharedInstance.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-//            [sharedInstance.locationManager requestWhenInUseAuthorization];
-//        }
-//        
-//        [sharedInstance.locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-//        [sharedInstance.locationManager startUpdatingLocation];
         
     });
     
     return sharedInstance;
 }
 
+- (void)start {
+    [self.locationManager startUpdatingLocation];
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
         
-        CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-        if (status == kCLAuthorizationStatusRestricted && status == kCLAuthorizationStatusDenied) {
-        } else {
-            _locationManager = [[CLLocationManager alloc] init];
-            _locationManager.delegate = self;
-            _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        }
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
         
-        if (status == kCLAuthorizationStatusNotDetermined) {
-            if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-                [_locationManager requestWhenInUseAuthorization];
-            }
+        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [self.locationManager requestWhenInUseAuthorization];
         }
         
         _observers = [[NSMutableArray alloc] init];
-//        self.locationManager = [[CLLocationManager alloc] init];
-//        self.locationManager.delegate = self;
-//        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-//        self.locationManager.distanceFilter = kCLDistanceFilterNone;
-//        
-//        if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-//            [self.locationManager requestWhenInUseAuthorization];
-//        }
-        
-//        [self.locationManager startUpdatingLocation];
     }
     return self;
 }
 
-- (void) locationControllerDidUpdateLocation:(CLLocation *)location {
+- (void)locationControllerDidUpdateLocation:(CLLocation *)location {
     self.currentUserLocation = location;
 }
 
-- (void) addLocationManagerDelegate:(id<LocationControllerDelegate>)delegate {
+- (void)addLocationManagerDelegate:(id<LocationControllerDelegate>)delegate {
     if (![self.observers containsObject:delegate]) {
         [self.observers addObject:delegate];
     }
-    [self.locationManager startUpdatingLocation];
 }
 
-- (void) removelocationManagerDelegate:(id<LocationControllerDelegate>)delegate {
+- (void)removelocationManagerDelegate:(id<LocationControllerDelegate>)delegate {
     if ([self.observers containsObject:delegate]) {
         [self.observers removeObject:delegate];
     }
 }
 
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+
+}
 
 //Sets class property currentUserLocation to the last logged location when a user moves
-- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+
+    CLLocation *location = locations.lastObject;
+    CLLocationDistance distance = [self getDistance:location];
     
-    [self.delegate locationControllerDidUpdateLocation:locations.lastObject];
-    [self setLocation:locations.lastObject];
-    self.currentUserLocation = locations.lastObject;
+    if (distance > 5 * 1600 || self.location == nil) { // 5 miles
+        [self setLocation:locations.lastObject];
+        self.currentUserLocation = locations.lastObject;
+        
+        for (id<LocationControllerDelegate>delegate in self.observers) {
+            [delegate locationControllerDidUpdateLocation:locations.lastObject];
+        }
+    }
     
 }
 

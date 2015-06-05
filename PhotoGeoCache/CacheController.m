@@ -9,6 +9,12 @@
 #import "CacheController.h"
 #import "PrimaryCollectionViewController.h"
 
+@interface CacheController()
+
+@property (nonatomic, strong) NSArray *caches;
+
+@end
+
 
 @implementation CacheController
 
@@ -18,42 +24,46 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[CacheController alloc] init];
-        [sharedInstance loadCacheFromParse];
     });
     return sharedInstance;
 }
 
+- (void)refreshCaches:(void (^)(BOOL empty))completion {
 
-- (void)loadCacheFromParse {
-    
-    PFQuery *query = [Cache query];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-        for (Cache *cache in objects) {
-            [cache pin];
+    [self requestLocations:^(NSArray *caches) {
+        self.caches = caches;
+        if (caches.count > 0) {
+            completion(NO);
+        } else {
+            completion(YES);
         }
     }];
+    
 }
 
+- (void)requestLocations:(void (^)(NSArray *caches))completion {
+    
 
-- (NSArray *)caches {
-    
-    PFGeoPoint *userGeoPoint = [PFUser currentUser][@"location"];
-    
-    PFQuery *query = [Cache query];
-    [query fromLocalDatastore];
-    [query whereKey:@"location" nearGeoPoint:userGeoPoint withinMiles:20];
-    query.limit = 20;
-    
-    NSMutableArray *photoArray = [[query findObjects] mutableCopy];
-    [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error){
-        if (!error) {
-                [[PFUser currentUser] setObject:geoPoint forKey:@"currentLocation"];
-                [[PFUser currentUser] saveInBackground];
-            }
-        }];
-    
-    return photoArray;
+    if ([MapDataController sharedInstance].currentUserLocation != nil) {
+
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:[MapDataController sharedInstance].currentUserLocation];
+        
+        [[PFUser currentUser] setObject:geoPoint forKey:@"currentLocation"];
+        [[PFUser currentUser] saveInBackground];
+        
+        PFQuery *query = [Cache query];
+        [query whereKey:@"location" nearGeoPoint:geoPoint withinMiles:20];
+        query.limit = 20;
+        
+        NSMutableArray *photoArray = [[query findObjects] mutableCopy];
+        completion(photoArray);
+
+    } else {
+        
+        completion(nil);
+        
+    }
+
 }
 
 

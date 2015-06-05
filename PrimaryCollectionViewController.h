@@ -12,6 +12,4 @@
 
 @interface PrimaryCollectionViewController : UICollectionViewController
 
-@property (assign, nonatomic) CLLocation *currentLocation;
-
 @end
