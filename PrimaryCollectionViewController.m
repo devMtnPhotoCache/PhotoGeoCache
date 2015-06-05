@@ -39,7 +39,7 @@
 
 - (void)test {
     CacheDetailViewController *detailView = [[CacheDetailViewController alloc]init];
-    detailView.test
+    detailView.test = [NSString string];
 }
 
 - (void)didReceiveMemoryWarning {
