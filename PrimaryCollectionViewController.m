@@ -12,13 +12,18 @@
 #import <CoreLocation/CoreLocation.h>
 #import "MapDataController.h"
 
+
+
 @interface PrimaryCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, LocationControllerDelegate>
+
+
 
 //@property (strong, nonatomic) PrimaryCollectionViewControllerDataSource *dataSource;
 
 @end
 
 @implementation PrimaryCollectionViewController
+@dynamic collectionView;
 
 
 - (void)viewDidLoad {
@@ -38,18 +43,23 @@
 
 #pragma mark - UICollectionViewDelegate
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                               duration:(NSTimeInterval)duration{
+    
+    [self.collectionView.collectionViewLayout invalidateLayout];
+    
+}
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(self.view.frame.size.width/2.0, self.view.frame.size.width/2.0);
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
-{
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
 }
 
