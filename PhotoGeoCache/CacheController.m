@@ -7,6 +7,14 @@
 //
 
 #import "CacheController.h"
+#import "PrimaryCollectionViewController.h"
+
+@interface CacheController()
+
+@property (nonatomic, strong) NSArray *caches;
+
+@end
+
 
 @implementation CacheController
 
@@ -16,28 +24,48 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[CacheController alloc] init];
-        [sharedInstance loadCacheFromParse];
     });
     return sharedInstance;
 }
 
-- (void)loadCacheFromParse {
-    
-    PFQuery *query = [Cache query];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-        for (Cache *cache in objects) {
-            [cache pin];
+- (void)refreshCaches:(void (^)(BOOL empty))completion {
+
+    [self requestLocations:^(NSArray *caches) {
+        self.caches = caches;
+        if (caches.count > 0) {
+            completion(NO);
+        } else {
+            completion(YES);
         }
     }];
+    
 }
 
-- (NSArray *)caches {
+- (void)requestLocations:(void (^)(NSArray *caches))completion {
     
-    PFQuery *query = [Cache query];
-    [query fromLocalDatastore];
-    return [query findObjects];
+
+    if ([MapDataController sharedInstance].currentUserLocation != nil) {
+
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:[MapDataController sharedInstance].currentUserLocation];
+        
+        [[PFUser currentUser] setObject:geoPoint forKey:@"currentLocation"];
+        [[PFUser currentUser] saveInBackground];
+        
+        PFQuery *query = [Cache query];
+        [query whereKey:@"location" nearGeoPoint:geoPoint withinMiles:20];
+        query.limit = 20;
+        
+        NSMutableArray *photoArray = [[query findObjects] mutableCopy];
+        completion(photoArray);
+
+    } else {
+        
+        completion(nil);
+        
+    }
+
 }
+
 
 - (void)addCacheWithInfo:(CLLocation *)location photo:(UIImage *)photo rating:(NSNumber *)rating difficultyRating: (NSNumber *)difficultyRating difficultySetting:(NSString *)difficultySetting type:(NSString *)type addedByUser:(NSString *)addedByUser {
     
@@ -59,7 +87,7 @@
     cache.type = type;
     cache.addedByUser = addedByUser;
     
-  
+    
     [cache save];
 }
 
@@ -71,7 +99,7 @@
 
 - (void)addCache:(Cache *)cache {
     
- 
+  
     [cache save];
 }
 

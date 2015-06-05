@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 @import Parse;
+#import "MapDataController.h"
 
 @interface AppDelegate ()
 
@@ -27,6 +28,9 @@
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    [[MapDataController sharedInstance] start];
     
     return YES;
 }

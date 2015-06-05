@@ -9,11 +9,11 @@
         <scene sceneID="gV7-Wh-qdd">
             <objects>
                 <collectionViewController id="WWJ-NA-lCr" customClass="PrimaryCollectionViewController" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mdv-E3-ANa">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" dataMode="prototypes" id="mdv-E3-ANa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c4F-IE-3PW">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="daa-YX-VEE">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -51,6 +51,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="n91-ae-s8c"/>
+                    <connections>
+                        <outlet property="collectionView" destination="mdv-E3-ANa" id="taL-bY-cc1"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7i-aD-eCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Xqs-oq-h97" customClass="PrimaryCollectionViewDataSource"/>
@@ -73,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yh5-xi-egy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180" y="1563"/>
+            <point key="canvasLocation" x="3121" y="1407"/>
         </scene>
         <!--Cache Detail View Controller-->
         <scene sceneID="z51-pF-bLC">
@@ -101,12 +104,12 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a9-Qg-zdL">
-                                                <rect key="frame" x="8" y="608" width="85.5" height="144"/>
+                                                <rect key="frame" x="8" y="608" width="86" height="144"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="144" id="g5M-fR-jmK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -143,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kk-BL-gy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="805"/>
+            <point key="canvasLocation" x="2672" y="37"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="JEm-kN-KEf">
@@ -161,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDe-U7-7MQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="1563"/>
+            <point key="canvasLocation" x="4278" y="37"/>
         </scene>
         <!--Parse Login View Controller-->
         <scene sceneID="xfa-wu-uNS">
@@ -179,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Xh-Uk-NGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2581" y="1563"/>
+            <point key="canvasLocation" x="3121" y="717"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="lIE-40-pIQ">
@@ -197,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4r1-SB-8Gd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2581" y="802"/>
+            <point key="canvasLocation" x="3595" y="37"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="APq-qm-SaO">

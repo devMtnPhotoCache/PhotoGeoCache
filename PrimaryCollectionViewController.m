@@ -9,34 +9,32 @@
 #import "PrimaryCollectionViewController.h"
 #import "PictureFeedCollectionViewCell.h"
 #import "CacheController.h"
+#import <CoreLocation/CoreLocation.h>
+#import "MapDataController.h"
 
-@interface PrimaryCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+
+@interface PrimaryCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, LocationControllerDelegate>
+
+
 
 //@property (strong, nonatomic) PrimaryCollectionViewControllerDataSource *dataSource;
 
 @end
 
 @implementation PrimaryCollectionViewController
+@dynamic collectionView;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [[CacheController sharedInstance]addCacheWithInfo:nil photo:[UIImage imageNamed:@"clouds"] rating:@3 difficultyRating:@3 difficultySetting:@"Hard" type:@"Urban" addedByUser:@"Jake"];
     
-    // Do any additional setup after loading the view.
-    
-//    UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
-//    self.dataSource = [PrimaryCollectionViewControllerDataSource new];
-//    self.collectionView.collectionViewLayout = layout;
-//    self.collectionView.dataSource = self.dataSource;
-//    self.collectionView.delegate = self;
-    
-//    self.collectionView.collectionViewLayout = self;
-    
-    //self.collectionView.backgroundColor = [UIColor whiteColor];
+    [[CacheController sharedInstance] refreshCaches:^(BOOL empty) {
+        if (!empty) {
+            [self.collectionView reloadData];
+        }
+    }];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -45,22 +43,48 @@
 
 #pragma mark - UICollectionViewDelegate
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                               duration:(NSTimeInterval)duration{
+    
+    [self.collectionView.collectionViewLayout invalidateLayout];
+    
+}
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return CGSizeMake(self.view.frame.size.width/2.0, self.view.frame.size.width/2.0);
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
-{
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
 }
 
+- (void) locationControllerDidUpdateLocation:(CLLocation *)location {
 
+    // THIS WILL RELOAD COLLECTION VIEW EVERY TIME THE PHONE MOVES 5 MILES
+    // YOU LIKELY WOULD BE BETTER OFF TO LET THE USER HIT RELOAD, OR ALERT
+    // THEM AND LET THEM DECIDE IF THEY WANT TO RELOAD
+    
+    [[CacheController sharedInstance] refreshCaches:^(BOOL empty) {
+        if (!empty) {
+            [self.collectionView reloadData];
+        }
+    }];
+
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [[MapDataController sharedInstance] addLocationManagerDelegate:self];
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [[MapDataController sharedInstance] removelocationManagerDelegate:self];
+}
 
 
 /*

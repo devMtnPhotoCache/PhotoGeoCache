@@ -8,7 +8,9 @@
 
 
 @import UIKit;
+#import <CoreLocation/CoreLocation.h>
 
 @interface PrimaryCollectionViewController : UICollectionViewController
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

@@ -13,7 +13,7 @@
 #import "MapViewController.h"
 #import "MapDataController.h"
 #import "Cache.h"
-
+#import "CameraViewController.h"
 
 @interface UIViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
@@ -56,7 +56,7 @@
     
     Cache *currentCache = [Cache new];
     
-    self.cacheLocation = currentCache.location;
+    self.cacheLocation = [[CLLocation alloc] initWithLatitude:currentCache.location.latitude longitude:currentCache.location.longitude];
     
     self.circleCenter = [[MapDataController sharedInstance] getRandomizedSearchCircle:self.cacheLocation];
     
@@ -87,6 +87,7 @@
     }
 }
 
+//Zooms to Search Circle at view load
 - (void) mapView:(MKMapView *)mapView didAddOverlayRenderers:(NSArray *)renderers {
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.circleCenter, 2*METERS_MILE, 2*METERS_MILE);
@@ -98,6 +99,7 @@
     
 }
 
+//Renderer for Circle
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView
             rendererForOverlay:(id<MKOverlay>)overlay{
     
@@ -119,8 +121,52 @@
     self.didAddOverlayRenderer = YES;
 }
 
+# pragma - alerts
+- (void)cacheIncompleteAlert {
+    
+    UIAlertController *incompleteAlert = [UIAlertController alertControllerWithTitle:@"Too far from the cache!" message:@"Keep going! You can do it!" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"You're right. I'll look some more" style:UIAlertActionStyleDefault handler:nil];
+    
+    [incompleteAlert addAction:confirmAction];
+    
+    [self presentViewController:incompleteAlert animated:YES completion:nil];
+    
+}
 
+- (void)cacheCompleteAlert {
+    
+    UIAlertController *completeAlert = [UIAlertController alertControllerWithTitle:@"You did it! Congratulations!" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *completeAction = [UIAlertAction actionWithTitle:@"Take a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        CameraViewController *newCamera = [[CameraViewController alloc] init];
+        
+        dispatch_async(dispatch_get_main_queue(), ^ {
+                [self presentViewController:newCamera animated:YES completion:nil];
+        });
+        
+    }];
+    
+    UIAlertAction *stayAction = [UIAlertAction actionWithTitle:@"Complete without a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }];
+    
+    [completeAlert addAction:completeAction];
+    [completeAlert addAction:stayAction];
+    
+    [self presentViewController:completeAlert animated:YES completion:nil];
+}
 
+- (IBAction)finishButtonTapped:(id)sender {
+    
+    if ([[MapDataController sharedInstance] canCompleteCache] == YES) {
+        [self cacheCompleteAlert];
+    } else {
+        [self cacheIncompleteAlert];
+    }
+}
 
 
 @end
