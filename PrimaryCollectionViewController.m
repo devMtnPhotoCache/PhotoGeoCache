@@ -11,12 +11,13 @@
 #import "CacheController.h"
 #import <CoreLocation/CoreLocation.h>
 #import "MapDataController.h"
+#import "CacheDetailViewController.h"
 
 
 
 @interface PrimaryCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, LocationControllerDelegate>
 
-
+@property (nonatomic, strong) NSIndexPath *indexPath;
 
 //@property (strong, nonatomic) PrimaryCollectionViewControllerDataSource *dataSource;
 
@@ -76,6 +77,22 @@
     }];
 
     
+}
+
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.indexPath = indexPath;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(PictureFeedCollectionViewCell *)sender
+{
+    if ([segue.identifier isEqualToString:@"detailIdentifier"]){
+        CacheDetailViewController *cacheDetailViewController = [segue destinationViewController];
+        cacheDetailViewController.selectedImage = sender.imageView.image;
+//        CacheDetailViewController.
+        sender.
+        
+    }
 }
 
 - (void) viewWillAppear:(BOOL)animated {

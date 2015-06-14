@@ -37,8 +37,9 @@
         } else {
             completion(YES);
         }
+//        NSLog(@"%@", caches);
     }];
-    
+
 }
 
 - (void)requestLocations:(void (^)(NSArray *caches))completion {

@@ -42,6 +42,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="MbW-wX-6Oq" id="an5-tI-nu8"/>
+                                    <segue destination="l2J-ll-zmg" kind="show" identifier="detailIdentifier" id="QhU-Ko-UBc"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -94,17 +95,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5L-02-LTG">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1142"/>
+                                        <rect key="frame" x="0.0" y="-315" width="600" height="1142"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3C-6N-H1h">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ghosted" translatesAutoresizingMaskIntoConstraints="NO" id="N3C-6N-H1h">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="1Sl-CU-18I"/>
                                                     <constraint firstAttribute="height" constant="600" id="dQ3-hm-nd6"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a9-Qg-zdL">
-                                                <rect key="frame" x="8" y="608" width="86" height="144"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a9-Qg-zdL">
+                                                <rect key="frame" x="8" y="608" width="301" height="144"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="144" id="g5M-fR-jmK"/>
                                                 </constraints>
@@ -112,24 +113,35 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR7-du-lMD">
+                                                <rect key="frame" x="0.0" y="556" width="600" height="30"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Bz4-kc-dcy" kind="show" id="Ckk-5l-AAX"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="3a9-Qg-zdL" secondAttribute="trailing" constant="8" id="M8r-Wg-Krc"/>
+                                            <constraint firstAttribute="trailing" secondItem="3a9-Qg-zdL" secondAttribute="trailing" constant="291" id="M8r-Wg-Krc"/>
                                             <constraint firstAttribute="trailing" secondItem="N3C-6N-H1h" secondAttribute="trailing" id="MLm-HT-Gng"/>
                                             <constraint firstAttribute="trailing" secondItem="N3C-6N-H1h" secondAttribute="trailing" id="OEa-ex-lcD"/>
                                             <constraint firstItem="3a9-Qg-zdL" firstAttribute="top" secondItem="N3C-6N-H1h" secondAttribute="bottom" constant="8" id="VLS-hw-8Ne"/>
                                             <constraint firstAttribute="height" constant="1142" id="YA4-bU-z0L"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3a9-Qg-zdL" secondAttribute="trailing" constant="8" id="ZH1-aR-f17"/>
                                             <constraint firstItem="N3C-6N-H1h" firstAttribute="leading" secondItem="j5L-02-LTG" secondAttribute="leading" id="eDl-tI-gZa"/>
+                                            <constraint firstAttribute="trailing" secondItem="N3C-6N-H1h" secondAttribute="trailing" id="iMj-Eg-sNL"/>
                                             <constraint firstItem="N3C-6N-H1h" firstAttribute="top" secondItem="j5L-02-LTG" secondAttribute="top" id="u6P-H4-Pv1"/>
                                             <constraint firstItem="3a9-Qg-zdL" firstAttribute="leading" secondItem="j5L-02-LTG" secondAttribute="leading" constant="8" id="za7-ci-ia3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="j5L-02-LTG" firstAttribute="top" secondItem="kEU-Nr-lzw" secondAttribute="top" id="6Iu-il-iA7"/>
+                                    <constraint firstItem="j5L-02-LTG" firstAttribute="top" secondItem="kEU-Nr-lzw" secondAttribute="top" constant="-315" id="6Iu-il-iA7"/>
                                     <constraint firstAttribute="trailing" secondItem="j5L-02-LTG" secondAttribute="trailing" id="6nN-gZ-iZA"/>
+                                    <constraint firstAttribute="trailing" secondItem="j5L-02-LTG" secondAttribute="trailing" id="O0r-mm-z1z"/>
                                     <constraint firstItem="j5L-02-LTG" firstAttribute="leading" secondItem="kEU-Nr-lzw" secondAttribute="leading" id="WJI-hK-bfW"/>
                                     <constraint firstAttribute="height" constant="600" id="Yg6-qr-tWf"/>
                                 </constraints>
@@ -143,10 +155,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="kEU-Nr-lzw" secondAttribute="trailing" constant="-16" id="y6y-ss-lr9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailDescriptionLabel" destination="3a9-Qg-zdL" id="DvZ-hy-bf4"/>
+                        <outlet property="detailImage" destination="N3C-6N-H1h" id="4P2-xk-qBx"/>
+                        <outlet property="goButton" destination="mR7-du-lMD" id="JcY-zV-DDK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8kk-BL-gy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2672" y="37"/>
+            <point key="canvasLocation" x="2672" y="32"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="JEm-kN-KEf">
@@ -221,4 +238,7 @@
             <point key="canvasLocation" x="1171" y="32"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ghosted" width="317" height="212"/>
+    </resources>
 </document>

@@ -19,7 +19,6 @@
 		7D16787E1B17D03F00396644 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1678781B17D03F00396644 /* ParseUI.framework */; };
 		7D1678841B18CEEA00396644 /* PrimaryCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1678831B18CEEA00396644 /* PrimaryCollectionViewDataSource.m */; };
 		7DCC56201B1E41FB002A1329 /* CacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC561F1B1E41FB002A1329 /* CacheController.m */; };
-		7DDFFB751B1D13CD00A2B9F6 /* PictureFeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDFFB741B1D13CD00A2B9F6 /* PictureFeedController.m */; };
 		D02931581B0ADD05005175B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931571B0ADD05005175B1 /* main.m */; };
 		D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D029315A1B0ADD05005175B1 /* AppDelegate.m */; };
 		D02931641B0ADD05005175B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02931621B0ADD05005175B1 /* Main.storyboard */; };
@@ -83,8 +82,6 @@
 		7D1678831B18CEEA00396644 /* PrimaryCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimaryCollectionViewDataSource.m; sourceTree = "<group>"; };
 		7DCC561E1B1E41FB002A1329 /* CacheController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheController.h; sourceTree = "<group>"; };
 		7DCC561F1B1E41FB002A1329 /* CacheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheController.m; sourceTree = "<group>"; };
-		7DDFFB731B1D13CD00A2B9F6 /* PictureFeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureFeedController.h; sourceTree = "<group>"; };
-		7DDFFB741B1D13CD00A2B9F6 /* PictureFeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureFeedController.m; sourceTree = "<group>"; };
 		9D50E0BC9B546D36910903A7 /* Pods-PhotoGeoCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGeoCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoGeoCache/Pods-PhotoGeoCache.debug.xcconfig"; sourceTree = "<group>"; };
 		D02931521B0ADD05005175B1 /* PhotoGeoCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGeoCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02931561B0ADD05005175B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -239,6 +236,7 @@
 		D02931541B0ADD05005175B1 /* PhotoGeoCache */ = {
 			isa = PBXGroup;
 			children = (
+				D02931621B0ADD05005175B1 /* Main.storyboard */,
 				D02931591B0ADD05005175B1 /* AppDelegate.h */,
 				D029315A1B0ADD05005175B1 /* AppDelegate.m */,
 				EB800A391B0E736800E22E5F /* ViewController.h */,
@@ -249,7 +247,6 @@
 				EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */,
 				EB800A2F1B0E6D4F00E22E5F /* CreateAChallengeViewController.h */,
 				EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */,
-				D02931621B0ADD05005175B1 /* Main.storyboard */,
 				EB800A351B0E6D9C00E22E5F /* ParseThings */,
 				EB800A381B0E6E2B00E22E5F /* Maps */,
 				EB800A371B0E6E1000E22E5F /* Camera */,
@@ -334,8 +331,6 @@
 				7D1678831B18CEEA00396644 /* PrimaryCollectionViewDataSource.m */,
 				7D16785B1B17B0CF00396644 /* PictureFeedCollectionViewCell.h */,
 				7D16785C1B17B0CF00396644 /* PictureFeedCollectionViewCell.m */,
-				7DDFFB731B1D13CD00A2B9F6 /* PictureFeedController.h */,
-				7DDFFB741B1D13CD00A2B9F6 /* PictureFeedController.m */,
 			);
 			name = PrimaryCollectionView;
 			sourceTree = "<group>";
@@ -503,7 +498,6 @@
 				D05E2E111B18DC3600BE63BA /* CacheDetailViewController.m in Sources */,
 				EB800A131B0E6B8000E22E5F /* FoundCacheObject.m in Sources */,
 				7D1678841B18CEEA00396644 /* PrimaryCollectionViewDataSource.m in Sources */,
-				7DDFFB751B1D13CD00A2B9F6 /* PictureFeedController.m in Sources */,
 				7DCC56201B1E41FB002A1329 /* CacheController.m in Sources */,
 				D02931581B0ADD05005175B1 /* main.m in Sources */,
 				EB800A191B0E6B9A00E22E5F /* Rating.m in Sources */,

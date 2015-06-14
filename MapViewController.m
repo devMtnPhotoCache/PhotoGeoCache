@@ -21,7 +21,6 @@
 @property (nonatomic) BOOL showsUserLocation;
 @property (nonatomic) BOOL userLocationUpdated;
 @property (nonatomic) BOOL didAddOverlayRenderer;
-@property (nonatomic) CLLocation *cacheLocation;
 @property (nonatomic) CLLocationCoordinate2D circleCenter;
 
 
