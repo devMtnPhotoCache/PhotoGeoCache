@@ -27,6 +27,8 @@
     self.detailImage.image = self.selectedImage;
     
     [self updateWithCache:self.cache];
+    
+    [self.detailImage setContentMode:UIViewContentModeScaleAspectFill];
 }
 
 - (void)updateWithCache:(Cache *)cache {
