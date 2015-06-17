@@ -51,11 +51,14 @@
         [[MapDataController sharedInstance].locationManager requestWhenInUseAuthorization];
     }
     
+    [self updateWithCacheForLocation:self.cache];
+    
 #pragma  - Playing with coordinates, drawing a circle
+}
+
+- (void)updateWithCacheForLocation:(Cache *)cache {
     
-    Cache *currentCache = [Cache new];
-    
-    self.cacheLocation = [[CLLocation alloc] initWithLatitude:currentCache.location.latitude longitude:currentCache.location.longitude];
+    self.cacheLocation = [[CLLocation alloc] initWithLatitude:cache.location.latitude longitude:cache.location.longitude];
     
     self.circleCenter = [[MapDataController sharedInstance] getRandomizedSearchCircle:self.cacheLocation];
     
@@ -65,6 +68,8 @@
     
     //add circle overlay to view
     [self.mapView addOverlay:circle];
+
+    
 }
 
 - (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {

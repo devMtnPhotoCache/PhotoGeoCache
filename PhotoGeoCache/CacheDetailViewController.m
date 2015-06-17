@@ -25,13 +25,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.detailImage.image = self.selectedImage;
+    
+    [self updateWithCache:self.cache];
+}
+
+- (void)updateWithCache:(Cache *)cache {
+    self.detailImage.image = [UIImage imageWithData:cache.photo.getData];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    MapViewController *mapViewController = [MapViewController new];
-    Cache *cache = [Cache new];
-//    mapViewController.cacheLocation = [CacheController sharedInstance].caches[self.indexPath];
+    MapViewController *mapViewController = [segue destinationViewController];
+    mapViewController.cache = self.cache;
     
+    
+////    mapViewController.cacheLocation = [CacheController sharedInstance].caches[self.indexPath];
+//    
+//
 }
 
 

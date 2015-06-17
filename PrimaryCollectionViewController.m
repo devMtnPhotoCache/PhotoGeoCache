@@ -80,9 +80,7 @@
 }
 
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.indexPath = indexPath;
-}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(PictureFeedCollectionViewCell *)sender
 {
@@ -90,7 +88,9 @@
         CacheDetailViewController *cacheDetailViewController = [segue destinationViewController];
         cacheDetailViewController.selectedImage = sender.imageView.image;
 //        CacheDetailViewController.
-        sender.
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
+        Cache *cache = [CacheController sharedInstance].caches[indexPath.row];
+        cacheDetailViewController.cache = cache;
         
     }
 }

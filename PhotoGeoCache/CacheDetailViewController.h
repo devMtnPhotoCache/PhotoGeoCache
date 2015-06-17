@@ -8,11 +8,14 @@
 
 @import Foundation;
 @import UIKit;
+#import "Cache.h"
+
 
 @interface CacheDetailViewController : UIViewController
 
 @property (nonatomic, strong) UIImage *selectedImage;
 @property (nonatomic, strong) UILabel *selectedLabel;
 @property (nonatomic, strong) UIButton *selectedButton;
+@property (nonatomic, strong) Cache *cache;
 
 @end

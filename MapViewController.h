@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Cache.h"
 
 @import UIKit;
 
@@ -19,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 //@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (strong, nonatomic) Cache *cache;
 
 - (void)displayCacheCircle;
 
