@@ -15,13 +15,14 @@
 #import "Cache.h"
 #import "CameraViewController.h"
 
-@interface UIViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (nonatomic) MKUserLocation *userLocation;
 @property (nonatomic) BOOL showsUserLocation;
 @property (nonatomic) BOOL userLocationUpdated;
 @property (nonatomic) BOOL didAddOverlayRenderer;
-@property (nonatomic) CLLocationCoordinate2D circleCenter;
+@property (nonatomic, strong) CLLocation *circleCenter;
+@property (nonatomic) CLLocationCoordinate2D circleCenter2D;
 
 
 @end
@@ -63,8 +64,8 @@
     self.circleCenter = [[MapDataController sharedInstance] getRandomizedSearchCircle:self.cacheLocation];
     
     //make a circle and give it coordinates
-    MKCircle *circle = [MKCircle circleWithCenterCoordinate:[[MapDataController sharedInstance] getRandomizedSearchCircle:(self.cacheLocation)] radius: .5*METERS_MILE];
-    
+    self.circleCenter2D = CLLocationCoordinate2DMake(self.cacheLocation.coordinate.latitude, self.cacheLocation.coordinate.longitude);
+    MKCircle *circle = [MKCircle circleWithCenterCoordinate:self.circleCenter2D radius:.5];
     
     //add circle overlay to view
     [self.mapView addOverlay:circle];
@@ -94,7 +95,7 @@
 //Zooms to Search Circle at view load
 - (void) mapView:(MKMapView *)mapView didAddOverlayRenderers:(NSArray *)renderers {
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.circleCenter, 2*METERS_MILE, 2*METERS_MILE);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.circleCenter2D, 2*METERS_MILE, 2*METERS_MILE);
     
     if (!self.didAddOverlayRenderer) {
         [self.mapView setRegion:viewRegion animated:YES];
@@ -119,7 +120,7 @@
 
 - (void)displayCacheCircle {
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.circleCenter, 2*METERS_MILE, 2*METERS_MILE);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(self.circleCenter2D, 2*METERS_MILE, 2*METERS_MILE);
     
     [self.mapView setRegion:viewRegion animated:YES];
     self.didAddOverlayRenderer = YES;

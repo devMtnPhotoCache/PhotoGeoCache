@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MapDataController.m"
-            timestampString = "455141211.003562"
+            filePath = "MapViewController.m"
+            timestampString = "456270288.929401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "-locationManager:didUpdateLocations:"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "-updateWithCacheForLocation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

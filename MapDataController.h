@@ -36,7 +36,7 @@
 - (void) addLocationManagerDelegate:(id<LocationControllerDelegate>) delegate;
 - (void) removelocationManagerDelegate:(id<LocationControllerDelegate>) delegate;
 
-- (CLLocationCoordinate2D)getRandomizedSearchCircle:(CLLocation *)cacheLocation;
+- (CLLocation *)getRandomizedSearchCircle:(CLLocation *)cacheLocation;
 
 - (BOOL)canCompleteCache;
 

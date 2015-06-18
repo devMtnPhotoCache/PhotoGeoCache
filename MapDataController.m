@@ -12,6 +12,7 @@
 
 #import "MapDataController.h"
 #import "ViewController.h"
+#import "Cache.h"
 #import "CacheModel.h"
 @import UIKit;
 
@@ -33,9 +34,9 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[MapDataController alloc] init];
         
-        CacheModel *currentCache = [CacheModel new];
+       Cache *currentCache = [Cache new];
         
-        sharedInstance.cacheLocation = currentCache.cacheLocation;
+        sharedInstance.cacheLocation = [[CLLocation alloc] initWithLatitude:currentCache.location.latitude longitude:currentCache.location.longitude];
         
     });
     
@@ -101,11 +102,11 @@
 
 
 //Currently being called in:
-- (CLLocationCoordinate2D)getRandomizedSearchCircle:(CLLocation *)cacheLocation {
+- (CLLocation *)getRandomizedSearchCircle:(CLLocation *)cacheLocation {
     
     CLLocationDegrees randomizedCacheLatitude = cacheLocation.coordinate.latitude + (((float)arc4random_uniform(2)-.3))/ARC4RANDOM_MAX;
     CLLocationDegrees randomizedCacheLongitude = cacheLocation.coordinate.longitude + (((float)arc4random_uniform(2)-.3))/ARC4RANDOM_MAX;
-    CLLocationCoordinate2D randomizedCircleCenter = CLLocationCoordinate2DMake(randomizedCacheLatitude, randomizedCacheLongitude);
+    CLLocation *randomizedCircleCenter = [[CLLocation alloc] initWithLatitude:randomizedCacheLatitude longitude:randomizedCacheLongitude];
     
     return randomizedCircleCenter;
     
