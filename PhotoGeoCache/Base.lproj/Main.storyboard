@@ -234,11 +234,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bZZ-sV-aUj">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bZZ-sV-aUj">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bZZ-sV-aUj" firstAttribute="top" secondItem="8Db-hi-O3E" secondAttribute="bottom" id="2Sn-RH-KhS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bZZ-sV-aUj" secondAttribute="trailing" constant="-16" id="3Fl-Lq-sSS"/>
+                            <constraint firstItem="bZZ-sV-aUj" firstAttribute="leading" secondItem="Oz5-An-5A1" secondAttribute="leadingMargin" constant="-16" id="a9b-wE-iBK"/>
+                            <constraint firstItem="21A-b5-oO5" firstAttribute="top" secondItem="bZZ-sV-aUj" secondAttribute="bottom" id="fhm-WA-IxB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="bZZ-sV-aUj" id="O46-Zi-eH6"/>

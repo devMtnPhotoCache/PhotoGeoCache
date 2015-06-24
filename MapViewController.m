@@ -44,7 +44,7 @@
     
     [self.mapView setShowsUserLocation:YES];
     
-    [self.mapView setDelegate:self];
+    //old location for setting mapView Delegate
     
 #pragma - Location Manager Setup
     
@@ -54,8 +54,9 @@
     
     [self updateWithCacheForLocation:self.cache];
     
-#pragma  - Playing with coordinates, drawing a circle
 }
+
+#pragma Mark - Playing with coordinates, drawing a circle
 
 - (void)updateWithCacheForLocation:(Cache *)cache {
     
@@ -64,32 +65,15 @@
     self.circleCenter = [[MapDataController sharedInstance] getRandomizedSearchCircle:self.cacheLocation];
     
     //make a circle and give it coordinates
-    self.circleCenter2D = CLLocationCoordinate2DMake(self.cacheLocation.coordinate.latitude, self.cacheLocation.coordinate.longitude);
-    MKCircle *circle = [MKCircle circleWithCenterCoordinate:self.circleCenter2D radius:.5];
+    self.circleCenter2D = CLLocationCoordinate2DMake(self.circleCenter.coordinate.latitude, self.circleCenter.coordinate.longitude);
+    MKCircle *circle = [MKCircle circleWithCenterCoordinate:self.circleCenter2D radius:.5*METERS_MILE];
+    
+    [self.mapView setDelegate:self];
     
     //add circle overlay to view
     [self.mapView addOverlay:circle];
 
     
-}
-
-- (void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    CLLocation *location = locations.lastObject;
-    
-    CLLocationDistance distance = [[MapDataController sharedInstance].locationManager.location distanceFromLocation:self.cacheLocation];
-    NSLog(@"%f", distance);
-    
-    if (distance < 10) {
-        NSLog(@"Congratulations");
-        
-    }
-    
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 2*METERS_MILE, 2*METERS_MILE);
-    
-    if (!self.userLocationUpdated) {
-        [self.mapView setRegion:viewRegion animated:YES];
-        self.userLocationUpdated = YES;
-    }
 }
 
 //Zooms to Search Circle at view load
