@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IsV-ls-FUg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IsV-ls-FUg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -60,25 +60,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7i-aD-eCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Xqs-oq-h97" customClass="PrimaryCollectionViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="1983" y="32"/>
-        </scene>
-        <!--Parse Login View Controller-->
-        <scene sceneID="Egz-fc-cGb">
-            <objects>
-                <viewController id="Wey-TM-OQb" customClass="ParseLoginViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cug-a3-Z3E"/>
-                        <viewControllerLayoutGuide type="bottom" id="MtO-0a-vZM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xJ4-bJ-iuI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yh5-xi-egy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3121" y="1407"/>
+            <point key="canvasLocation" x="1941" y="32"/>
         </scene>
         <!--Cache Detail View Controller-->
         <scene sceneID="z51-pF-bLC">
@@ -202,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NDe-U7-7MQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4278" y="37"/>
+            <point key="canvasLocation" x="2672" y="791"/>
         </scene>
         <!--Parse Login View Controller-->
         <scene sceneID="xfa-wu-uNS">
@@ -220,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Xh-Uk-NGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3121" y="717"/>
+            <point key="canvasLocation" x="1941" y="791"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="lIE-40-pIQ">
@@ -237,13 +219,28 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bZZ-sV-aUj">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wkh-EC-RHW">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Vjl-Vg-WZ8"/>
+                                    <barButtonItem title="Found It!" id="8ch-pP-lJp">
+                                        <connections>
+                                            <action selector="finishButtonTapped:" destination="Bz4-kc-dcy" id="HIE-Il-Xlt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="h74-H5-QQ8"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bZZ-sV-aUj" firstAttribute="top" secondItem="8Db-hi-O3E" secondAttribute="bottom" id="2Sn-RH-KhS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bZZ-sV-aUj" secondAttribute="trailing" constant="-16" id="3Fl-Lq-sSS"/>
+                            <constraint firstItem="21A-b5-oO5" firstAttribute="top" secondItem="wkh-EC-RHW" secondAttribute="bottom" id="9DP-Ob-qIi"/>
+                            <constraint firstItem="wkh-EC-RHW" firstAttribute="leading" secondItem="Oz5-An-5A1" secondAttribute="leadingMargin" constant="-16" id="Yrv-UP-QXN"/>
                             <constraint firstItem="bZZ-sV-aUj" firstAttribute="leading" secondItem="Oz5-An-5A1" secondAttribute="leadingMargin" constant="-16" id="a9b-wE-iBK"/>
                             <constraint firstItem="21A-b5-oO5" firstAttribute="top" secondItem="bZZ-sV-aUj" secondAttribute="bottom" id="fhm-WA-IxB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wkh-EC-RHW" secondAttribute="trailing" constant="-16" id="okW-8o-41r"/>
                         </constraints>
                     </view>
                     <connections>
@@ -252,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4r1-SB-8Gd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3595" y="37"/>
+            <point key="canvasLocation" x="3417" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="APq-qm-SaO">
@@ -270,7 +267,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRh-ge-sVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="32"/>
+            <point key="canvasLocation" x="1209" y="32"/>
         </scene>
     </scenes>
     <resources>
