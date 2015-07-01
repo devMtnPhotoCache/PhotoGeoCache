@@ -3,40 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict>
-		<key>Pods-PhotoGeoCache-iOS-Slide-Menu.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Pods-PhotoGeoCache.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-	</dict>
+	<dict/>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>65B44970374FBA53474FE274</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AE3D5EB9CB6C4A4BE190FFF8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE2B7DBC15433AE81BDCED51</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E3132C9AA49EB3416FD877D0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>
