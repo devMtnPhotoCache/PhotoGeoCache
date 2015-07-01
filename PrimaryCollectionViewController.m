@@ -87,7 +87,6 @@
     if ([segue.identifier isEqualToString:@"detailIdentifier"]){
         CacheDetailViewController *cacheDetailViewController = [segue destinationViewController];
         cacheDetailViewController.selectedImage = sender.imageView.image;
-//        CacheDetailViewController.
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
         Cache *cache = [CacheController sharedInstance].caches[indexPath.row];
         cacheDetailViewController.cache = cache;
