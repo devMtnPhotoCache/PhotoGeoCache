@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B46CB0D303CDCFF19A60C06 /* libPods-PhotoGeoCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BAA190A3D5DD25ECDBAECA1 /* libPods-PhotoGeoCache.a */; };
 		76AEABF61B1906D400145F3B /* CacheModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AEABF51B1906D400145F3B /* CacheModel.m */; };
 		76AEABF81B19071400145F3B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76AEABF71B19071400145F3B /* MapKit.framework */; };
 		7D16785D1B17B0CF00396644 /* PictureFeedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D16785C1B17B0CF00396644 /* PictureFeedCollectionViewCell.m */; };
@@ -22,13 +21,13 @@
 		D02931581B0ADD05005175B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931571B0ADD05005175B1 /* main.m */; };
 		D029315B1B0ADD05005175B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D029315A1B0ADD05005175B1 /* AppDelegate.m */; };
 		D02931641B0ADD05005175B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02931621B0ADD05005175B1 /* Main.storyboard */; };
-		D02931661B0ADD05005175B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02931651B0ADD05005175B1 /* Images.xcassets */; };
 		D02931691B0ADD05005175B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02931671B0ADD05005175B1 /* LaunchScreen.xib */; };
 		D02931751B0ADD05005175B1 /* PhotoGeoCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931741B0ADD05005175B1 /* PhotoGeoCacheTests.m */; };
 		D05E2E111B18DC3600BE63BA /* CacheDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2E101B18DC3600BE63BA /* CacheDetailViewController.m */; };
 		EB5E4D581B4242FD0024FE4C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E4D561B4242FD0024FE4C /* FBSDKCoreKit.framework */; };
 		EB5E4D591B4242FD0024FE4C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E4D571B4242FD0024FE4C /* FBSDKLoginKit.framework */; };
 		EB5E4D5B1B4243070024FE4C /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E4D5A1B4243070024FE4C /* FBSDKShareKit.framework */; };
+		EB5E4D8F1B447ADE0024FE4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB5E4D8E1B447ADE0024FE4C /* Images.xcassets */; };
 		EB8009ED1B0E68C300E22E5F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8009EC1B0E68C300E22E5F /* AudioToolbox.framework */; };
 		EB8009EF1B0E68CE00E22E5F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8009EE1B0E68CE00E22E5F /* CFNetwork.framework */; };
 		EB8009F11B0E68D800E22E5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8009F01B0E68D800E22E5F /* CoreGraphics.framework */; };
@@ -92,7 +91,6 @@
 		D02931591B0ADD05005175B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D029315A1B0ADD05005175B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D02931631B0ADD05005175B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D02931651B0ADD05005175B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D02931681B0ADD05005175B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D029316E1B0ADD05005175B1 /* PhotoGeoCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGeoCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D02931731B0ADD05005175B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +101,7 @@
 		EB5E4D561B4242FD0024FE4C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		EB5E4D571B4242FD0024FE4C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		EB5E4D5A1B4243070024FE4C /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		EB5E4D8E1B447ADE0024FE4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		EB8009EC1B0E68C300E22E5F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		EB8009EE1B0E68CE00E22E5F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		EB8009F01B0E68D800E22E5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -176,7 +175,6 @@
 				EB8009EF1B0E68CE00E22E5F /* CFNetwork.framework in Frameworks */,
 				EB8009ED1B0E68C300E22E5F /* AudioToolbox.framework in Frameworks */,
 				7D16787C1B17D03F00396644 /* ParseFacebookUtils.framework in Frameworks */,
-				5B46CB0D303CDCFF19A60C06 /* libPods-PhotoGeoCache.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +246,7 @@
 		D02931541B0ADD05005175B1 /* PhotoGeoCache */ = {
 			isa = PBXGroup;
 			children = (
+				EB5E4D8E1B447ADE0024FE4C /* Images.xcassets */,
 				D02931621B0ADD05005175B1 /* Main.storyboard */,
 				D02931591B0ADD05005175B1 /* AppDelegate.h */,
 				D029315A1B0ADD05005175B1 /* AppDelegate.m */,
@@ -263,7 +262,6 @@
 				EB800A381B0E6E2B00E22E5F /* Maps */,
 				EB800A371B0E6E1000E22E5F /* Camera */,
 				EB800A361B0E6DE800E22E5F /* PrimaryCollectionView */,
-				D02931651B0ADD05005175B1 /* Images.xcassets */,
 				D02931671B0ADD05005175B1 /* LaunchScreen.xib */,
 				D02931551B0ADD05005175B1 /* Supporting Files */,
 			);
@@ -374,7 +372,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D02931781B0ADD05005175B1 /* Build configuration list for PBXNativeTarget "PhotoGeoCache" */;
 			buildPhases = (
-				E02A862BDA09A0A15B0CCE32 /* Check Pods Manifest.lock */,
 				D029314E1B0ADD05005175B1 /* Sources */,
 				D029314F1B0ADD05005175B1 /* Frameworks */,
 				D02931501B0ADD05005175B1 /* Resources */,
@@ -417,10 +414,11 @@
 				TargetAttributes = {
 					D02931511B0ADD05005175B1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = J82ZA4388A;
+						DevelopmentTeam = W4XSS6X3G6;
 					};
 					D029316D1B0ADD05005175B1 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = W4XSS6X3G6;
 						TestTargetID = D02931511B0ADD05005175B1;
 					};
 				};
@@ -449,9 +447,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5E4D8F1B447ADE0024FE4C /* Images.xcassets in Resources */,
 				D02931641B0ADD05005175B1 /* Main.storyboard in Resources */,
 				D02931691B0ADD05005175B1 /* LaunchScreen.xib in Resources */,
-				D02931661B0ADD05005175B1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,24 +461,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E02A862BDA09A0A15B0CCE32 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D029314E1B0ADD05005175B1 /* Sources */ = {
@@ -547,47 +527,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D02931761B0ADD05005175B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
 		D02931771B0ADD05005175B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -623,31 +562,8 @@
 			};
 			name = Release;
 		};
-		D02931791B0ADD05005175B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D50E0BC9B546D36910903A7 /* Pods-PhotoGeoCache.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PhotoGeoCache",
-					"$(PROJECT_DIR)/Pods/parse-library-1.7.4",
-					"$(PROJECT_DIR)/parse-library-1.7.4",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = PhotoGeoCache/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-			};
-			name = Debug;
-		};
 		D029317A1B0ADD05005175B1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E92C51F56730005601E9F3CB /* Pods-PhotoGeoCache.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -667,29 +583,12 @@
 			};
 			name = Release;
 		};
-		D029317C1B0ADD05005175B1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = PhotoGeoCacheTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoGeoCache.app/PhotoGeoCache";
-			};
-			name = Debug;
-		};
 		D029317D1B0ADD05005175B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -697,6 +596,7 @@
 				INFOPLIST_FILE = PhotoGeoCacheTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoGeoCache.app/PhotoGeoCache";
 			};
 			name = Release;
@@ -707,7 +607,6 @@
 		D029314D1B0ADD05005175B1 /* Build configuration list for PBXProject "PhotoGeoCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D02931761B0ADD05005175B1 /* Debug */,
 				D02931771B0ADD05005175B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -716,7 +615,6 @@
 		D02931781B0ADD05005175B1 /* Build configuration list for PBXNativeTarget "PhotoGeoCache" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D02931791B0ADD05005175B1 /* Debug */,
 				D029317A1B0ADD05005175B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -725,7 +623,6 @@
 		D029317B1B0ADD05005175B1 /* Build configuration list for PBXNativeTarget "PhotoGeoCacheTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D029317C1B0ADD05005175B1 /* Debug */,
 				D029317D1B0ADD05005175B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
