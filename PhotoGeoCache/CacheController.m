@@ -67,32 +67,43 @@
 
 }
 
-
 - (void)addCacheWithInfo:(CLLocation *)location photo:(UIImage *)photo rating:(NSNumber *)rating difficultyRating: (NSNumber *)difficultyRating difficultySetting:(NSString *)difficultySetting type:(NSString *)type addedByUser:(NSString *)addedByUser {
     
-    Cache *cache = [Cache object];
+    Cache *cache = (Cache *)[PFObject objectWithClassName:@"Cache"];
     
     if (photo) {
         PFFile *imagePhoto = [PFFile fileWithData:UIImageJPEGRepresentation(photo, 0.95)];
-        cache.photo = imagePhoto;
+        cache[@"photo"] = imagePhoto;
     }
     
     if (location) {
         PFGeoPoint *geoLocation = [PFGeoPoint geoPointWithLocation:location];
-        cache.location = geoLocation;
+        cache[@"location"] = geoLocation;
     }
     
-    cache.rating = rating;
-    cache.difficultyRating = difficultyRating;
-    cache.difficultySetting = difficultySetting;
-    cache.type = type;
-    cache.addedByUser = addedByUser;
+    cache[@"rating"] = rating;
+    cache[@"difficultyRating"] = difficultyRating;
+    cache[@"difficultySetting"] = difficultySetting;
+    cache[@"type"] = type;
+    cache[@"addedByUser"] = addedByUser;
     
-    //check this
-    //
-    //
-    
-    [cache save];
+    [cache saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if (succeeded) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"uploadComplete" object:nil];
+            NSLog(@"Video has been uploaded to Parse");
+            UIAlertView *uploadSuccess = [[UIAlertView alloc] initWithTitle:@"Upload Successful" message:@"Your video was successfully uploaded to FlashCache" delegate:self cancelButtonTitle:@"Awesome!" otherButtonTitles: nil];
+            [uploadSuccess show];
+        }
+        else {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"uploadComplete" object:nil];
+            UIAlertView *uploadSuccess = [[UIAlertView alloc] initWithTitle:@"Uh-oh..." message:@"Your photo was unable to be uploaded to FlashCache" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+            [uploadSuccess show];
+            NSLog(@"%@", error);
+            
+        }
+    }];
+
 }
 
 - (void)removeCache:(Cache *)cache {

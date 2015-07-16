@@ -9,6 +9,7 @@
 #import "CameraViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <Parse/Parse.h>
+#import "Cache.h"
 
 @interface CameraViewController ()
 
@@ -50,7 +51,7 @@
     [super viewWillAppear:animated];
     _imagePicker = [[UIImagePickerController alloc]init];
     self.imagePicker.delegate = self;
-    self.imagePicker.allowsEditing = YES;
+    self.imagePicker.allowsEditing = NO;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -73,8 +74,16 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.chosenImageView.image = chosenImage;
-    [self dismissViewControllerAnimated:YES completion:^{self.imagePickerIsDisplayed = NO;}];
+    
+
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        self.imagePickerIsDisplayed = NO;
+    }];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+
 }
+
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:NO completion:nil];

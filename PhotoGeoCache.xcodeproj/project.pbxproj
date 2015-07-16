@@ -24,6 +24,8 @@
 		D02931691B0ADD05005175B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02931671B0ADD05005175B1 /* LaunchScreen.xib */; };
 		D02931751B0ADD05005175B1 /* PhotoGeoCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931741B0ADD05005175B1 /* PhotoGeoCacheTests.m */; };
 		D05E2E111B18DC3600BE63BA /* CacheDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2E101B18DC3600BE63BA /* CacheDetailViewController.m */; };
+		EB57B0F21B5819EC00B94D43 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB57B0F11B5819EC00B94D43 /* Accounts.framework */; };
+		EB57B0F41B5819F300B94D43 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB57B0F31B5819F300B94D43 /* Social.framework */; };
 		EB5E4D581B4242FD0024FE4C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E4D561B4242FD0024FE4C /* FBSDKCoreKit.framework */; };
 		EB5E4D591B4242FD0024FE4C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E4D571B4242FD0024FE4C /* FBSDKLoginKit.framework */; };
 		EB5E4D5B1B4243070024FE4C /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E4D5A1B4243070024FE4C /* FBSDKShareKit.framework */; };
@@ -51,7 +53,6 @@
 		EB800A251B0E6C4D00E22E5F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A241B0E6C4D00E22E5F /* MapViewController.m */; };
 		EB800A281B0E6C6300E22E5F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A271B0E6C6300E22E5F /* CameraViewController.m */; };
 		EB800A2B1B0E6C7F00E22E5F /* UserDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */; };
-		EB800A2E1B0E6D3C00E22E5F /* ParseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */; };
 		EB800A311B0E6D4F00E22E5F /* CreateAChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */; };
 		EB800A341B0E6D8400E22E5F /* MapDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A331B0E6D8400E22E5F /* MapDataController.m */; };
 		EB800A3B1B0E736800E22E5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB800A3A1B0E736800E22E5F /* ViewController.m */; };
@@ -98,6 +99,9 @@
 		D05E2E0F1B18DC3600BE63BA /* CacheDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheDetailViewController.h; sourceTree = "<group>"; };
 		D05E2E101B18DC3600BE63BA /* CacheDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDetailViewController.m; sourceTree = "<group>"; };
 		E92C51F56730005601E9F3CB /* Pods-PhotoGeoCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGeoCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoGeoCache/Pods-PhotoGeoCache.release.xcconfig"; sourceTree = "<group>"; };
+		EB57B0EF1B5818A100B94D43 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		EB57B0F11B5819EC00B94D43 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		EB57B0F31B5819F300B94D43 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EB5E4D561B4242FD0024FE4C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		EB5E4D571B4242FD0024FE4C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		EB5E4D5A1B4243070024FE4C /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -135,8 +139,6 @@
 		EB800A271B0E6C6300E22E5F /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = ../CameraViewController.m; sourceTree = "<group>"; };
 		EB800A291B0E6C7F00E22E5F /* UserDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDataController.h; path = ../UserDataController.h; sourceTree = "<group>"; };
 		EB800A2A1B0E6C7F00E22E5F /* UserDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDataController.m; path = ../UserDataController.m; sourceTree = "<group>"; };
-		EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseLoginViewController.h; path = ../ParseLoginViewController.h; sourceTree = "<group>"; };
-		EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParseLoginViewController.m; path = ../ParseLoginViewController.m; sourceTree = "<group>"; };
 		EB800A2F1B0E6D4F00E22E5F /* CreateAChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAChallengeViewController.h; path = ../CreateAChallengeViewController.h; sourceTree = "<group>"; };
 		EB800A301B0E6D4F00E22E5F /* CreateAChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAChallengeViewController.m; path = ../CreateAChallengeViewController.m; sourceTree = "<group>"; };
 		EB800A321B0E6D8400E22E5F /* MapDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapDataController.h; path = ../MapDataController.h; sourceTree = "<group>"; };
@@ -150,6 +152,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB57B0F41B5819F300B94D43 /* Social.framework in Frameworks */,
+				EB57B0F21B5819EC00B94D43 /* Accounts.framework in Frameworks */,
 				76AEABF81B19071400145F3B /* MapKit.framework in Frameworks */,
 				EB8009F31B0E68E100E22E5F /* CoreLocation.framework in Frameworks */,
 				7D16787E1B17D03F00396644 /* ParseUI.framework in Frameworks */,
@@ -191,6 +195,9 @@
 		3BA1AA381E7D29D607D396F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB57B0F31B5819F300B94D43 /* Social.framework */,
+				EB57B0F11B5819EC00B94D43 /* Accounts.framework */,
+				EB57B0EF1B5818A100B94D43 /* libc++.dylib */,
 				EB5E4D5A1B4243070024FE4C /* FBSDKShareKit.framework */,
 				EB5E4D561B4242FD0024FE4C /* FBSDKCoreKit.framework */,
 				EB5E4D571B4242FD0024FE4C /* FBSDKLoginKit.framework */,
@@ -324,8 +331,6 @@
 				7DCC561F1B1E41FB002A1329 /* CacheController.m */,
 				EB800A171B0E6B9A00E22E5F /* Rating.h */,
 				EB800A181B0E6B9A00E22E5F /* Rating.m */,
-				EB800A2C1B0E6D3C00E22E5F /* ParseLoginViewController.h */,
-				EB800A2D1B0E6D3C00E22E5F /* ParseLoginViewController.m */,
 				76AEABF41B1906D400145F3B /* CacheModel.h */,
 				76AEABF51B1906D400145F3B /* CacheModel.m */,
 			);
@@ -483,7 +488,6 @@
 				EB800A161B0E6B8C00E22E5F /* Cache.m in Sources */,
 				EB800A2B1B0E6C7F00E22E5F /* UserDataController.m in Sources */,
 				76AEABF61B1906D400145F3B /* CacheModel.m in Sources */,
-				EB800A2E1B0E6D3C00E22E5F /* ParseLoginViewController.m in Sources */,
 				EB800A251B0E6C4D00E22E5F /* MapViewController.m in Sources */,
 				EB800A311B0E6D4F00E22E5F /* CreateAChallengeViewController.m in Sources */,
 			);
