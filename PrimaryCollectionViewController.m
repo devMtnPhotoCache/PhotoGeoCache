@@ -33,11 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[CacheController sharedInstance] refreshCaches:^(BOOL empty) {
-        if (!empty) {
-            [self.collectionView reloadData];
-        }
-    }];
+ 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -161,6 +157,11 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     [[MapDataController sharedInstance] addLocationManagerDelegate:self];
+    [[CacheController sharedInstance] refreshCaches:^(BOOL empty) {
+        if (!empty) {
+            [self.collectionView reloadData];
+        }
+    }];
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
