@@ -419,7 +419,7 @@
 				TargetAttributes = {
 					D02931511B0ADD05005175B1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = W4XSS6X3G6;
+						DevelopmentTeam = CFVTXS6NX7;
 					};
 					D029316D1B0ADD05005175B1 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -584,6 +584,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
