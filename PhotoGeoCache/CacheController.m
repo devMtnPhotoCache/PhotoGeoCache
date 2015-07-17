@@ -72,7 +72,7 @@
     Cache *cache = (Cache *)[PFObject objectWithClassName:@"Cache"];
     
     if (photo) {
-        PFFile *imagePhoto = [PFFile fileWithData:UIImageJPEGRepresentation(photo, 1.00)];
+        PFFile *imagePhoto = [PFFile fileWithData:UIImageJPEGRepresentation(photo, 0.95)];
         cache[@"photo"] = imagePhoto;
     }
     
