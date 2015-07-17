@@ -10,6 +10,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <Parse/Parse.h>
 #import "Cache.h"
+#import "CacheController.h"
 
 @interface CameraViewController ()
 
@@ -39,16 +40,7 @@
     //self.titleTextField.layer.borderColor = [UIColor blueColor];
     self.titleTextField.layer.borderWidth = 1.0;
     self.titleTextField.layer.cornerRadius = 5.0;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    
     _imagePicker = [[UIImagePickerController alloc]init];
     self.imagePicker.delegate = self;
     self.imagePicker.allowsEditing = NO;
@@ -60,6 +52,17 @@
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     self.imagePicker.mediaTypes = [NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil];
+
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     if (!self.imagePickerIsDisplayed) {
         [self presentViewController:self.imagePicker animated:NO completion:nil];
         self.imagePickerIsDisplayed = YES;
@@ -72,15 +75,23 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.chosenImageView.image = chosenImage;
-    
 
     
+    
     [self dismissViewControllerAnimated:YES completion:^{
+       
+        NSString* mediaType = info[UIImagePickerControllerMediaType];
+        
+        if ([mediaType isEqual:kUTTypeImage]) {
+        UIImage *chosenImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+        self.chosenImageView.image = chosenImage;
+        
+        ///////////////////////SAVE IMAGE HERE
+        [[CacheController sharedInstance] addCacheWithInfo: [MapDataController sharedInstance].currentUserLocation photo:chosenImage rating:@10 difficultyRating:@10 difficultySetting:@"easy" type:@"1" addedByUser:@"user"];
+        }
         self.imagePickerIsDisplayed = NO;
     }];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
 
 }
 

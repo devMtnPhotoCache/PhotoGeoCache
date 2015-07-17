@@ -72,7 +72,7 @@
     Cache *cache = (Cache *)[PFObject objectWithClassName:@"Cache"];
     
     if (photo) {
-        PFFile *imagePhoto = [PFFile fileWithData:UIImageJPEGRepresentation(photo, 0.95)];
+        PFFile *imagePhoto = [PFFile fileWithData:UIImageJPEGRepresentation(photo, 1.00)];
         cache[@"photo"] = imagePhoto;
     }
     
@@ -91,8 +91,8 @@
         
         if (succeeded) {
             [[NSNotificationCenter defaultCenter] postNotificationName:@"uploadComplete" object:nil];
-            NSLog(@"Video has been uploaded to Parse");
-            UIAlertView *uploadSuccess = [[UIAlertView alloc] initWithTitle:@"Upload Successful" message:@"Your video was successfully uploaded to FlashCache" delegate:self cancelButtonTitle:@"Awesome!" otherButtonTitles: nil];
+            NSLog(@"Photo has been uploaded to Parse");
+            UIAlertView *uploadSuccess = [[UIAlertView alloc] initWithTitle:@"Upload Successful" message:@"Your photo was successfully uploaded to FlashCache" delegate:self cancelButtonTitle:@"Awesome!" otherButtonTitles: nil];
             [uploadSuccess show];
         }
         else {
