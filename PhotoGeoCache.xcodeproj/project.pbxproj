@@ -24,6 +24,7 @@
 		D02931691B0ADD05005175B1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02931671B0ADD05005175B1 /* LaunchScreen.xib */; };
 		D02931751B0ADD05005175B1 /* PhotoGeoCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D02931741B0ADD05005175B1 /* PhotoGeoCacheTests.m */; };
 		D05E2E111B18DC3600BE63BA /* CacheDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05E2E101B18DC3600BE63BA /* CacheDetailViewController.m */; };
+		EB2E48A91B5ED690007F67C3 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB2E48A81B5ED690007F67C3 /* ImagePickerViewController.m */; };
 		EB57B0F21B5819EC00B94D43 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB57B0F11B5819EC00B94D43 /* Accounts.framework */; };
 		EB57B0F41B5819F300B94D43 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB57B0F31B5819F300B94D43 /* Social.framework */; };
 		EB5E4D581B4242FD0024FE4C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5E4D561B4242FD0024FE4C /* FBSDKCoreKit.framework */; };
@@ -99,6 +100,8 @@
 		D05E2E0F1B18DC3600BE63BA /* CacheDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheDetailViewController.h; sourceTree = "<group>"; };
 		D05E2E101B18DC3600BE63BA /* CacheDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheDetailViewController.m; sourceTree = "<group>"; };
 		E92C51F56730005601E9F3CB /* Pods-PhotoGeoCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGeoCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoGeoCache/Pods-PhotoGeoCache.release.xcconfig"; sourceTree = "<group>"; };
+		EB2E48A71B5ED690007F67C3 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePickerViewController.h; sourceTree = "<group>"; };
+		EB2E48A81B5ED690007F67C3 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePickerViewController.m; sourceTree = "<group>"; };
 		EB57B0EF1B5818A100B94D43 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		EB57B0F11B5819EC00B94D43 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		EB57B0F31B5819F300B94D43 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -355,6 +358,8 @@
 			children = (
 				EB800A261B0E6C6300E22E5F /* CameraViewController.h */,
 				EB800A271B0E6C6300E22E5F /* CameraViewController.m */,
+				EB2E48A71B5ED690007F67C3 /* ImagePickerViewController.h */,
+				EB2E48A81B5ED690007F67C3 /* ImagePickerViewController.m */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -414,12 +419,12 @@
 		D029314A1B0ADD05005175B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = PhotoGeoCache;
 				TargetAttributes = {
 					D02931511B0ADD05005175B1 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = CFVTXS6NX7;
+						DevelopmentTeam = W4XSS6X3G6;
 					};
 					D029316D1B0ADD05005175B1 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -482,6 +487,7 @@
 				7DCC56201B1E41FB002A1329 /* CacheController.m in Sources */,
 				D02931581B0ADD05005175B1 /* main.m in Sources */,
 				EB800A191B0E6B9A00E22E5F /* Rating.m in Sources */,
+				EB2E48A91B5ED690007F67C3 /* ImagePickerViewController.m in Sources */,
 				EB800A281B0E6C6300E22E5F /* CameraViewController.m in Sources */,
 				EB800A341B0E6D8400E22E5F /* MapDataController.m in Sources */,
 				EB800A3B1B0E736800E22E5F /* ViewController.m in Sources */,

@@ -32,13 +32,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
- 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -47,7 +44,6 @@
                                duration:(NSTimeInterval)duration{
     
     [self.collectionView.collectionViewLayout invalidateLayout];
-    
 }
 
 
@@ -74,12 +70,7 @@
             [self.collectionView reloadData];
         }
     }];
-
-    
 }
-
-
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(PictureFeedCollectionViewCell *)sender
 {
@@ -89,73 +80,10 @@
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
         Cache *cache = [CacheController sharedInstance].caches[indexPath.row];
         cacheDetailViewController.cache = cache;
-        
     }
 }
 
-#pragma Parse Login
-
-- (IBAction)signUp:(id)sender {
-    PFSignUpViewController *signUp = [PFSignUpViewController new];
-    signUp.delegate = self;
-    [self presentViewController:signUp animated:YES completion:nil];
-    
-}
-
-- (IBAction)signIn:(id)sender {
-    PFLogInViewController *logIn = [PFLogInViewController new];
-    logIn.delegate = self;
-    [self presentViewController:logIn animated:YES completion:nil];
-}
-
-- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    self.currentUser = user;
-    
-    [self addUserData];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
-    self.currentUser = user;
-    
-    [self addUserData];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-- (void)addUserData {
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"yourData"];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        
-        if ([objects count] == 0) {
-            
-            PFObject *yourData = [PFObject objectWithClassName:@"yourData"];
-            yourData[@"dictionaryKey"] = @"dictionaryValue";
-            
-            // If there is a current user you can set that user as the only user that can access this object:
-            if (self.currentUser) {
-                yourData.ACL = [PFACL ACLWithUser:self.currentUser];
-            }
-            
-            [yourData saveInBackground];
-            
-        } else {
-            
-            NSLog(@"You already stored your data");
-        }
-        
-    }];
-    
-}
-
-
-
-- (void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [[MapDataController sharedInstance] addLocationManagerDelegate:self];
     [[CacheController sharedInstance] refreshCaches:^(BOOL empty) {
         if (!empty) {
@@ -167,6 +95,70 @@
 - (void) viewWillDisappear:(BOOL)animated {
     [[MapDataController sharedInstance] removelocationManagerDelegate:self];
 }
+
+
+#pragma Parse Login
+//
+//- (IBAction)signUp:(id)sender {
+//    PFSignUpViewController *signUp = [PFSignUpViewController new];
+//    signUp.delegate = self;
+//    [self presentViewController:signUp animated:YES completion:nil];
+//    
+//}
+//
+//- (IBAction)signIn:(id)sender {
+//    PFLogInViewController *logIn = [PFLogInViewController new];
+//    logIn.delegate = self;
+//    [self presentViewController:logIn animated:YES completion:nil];
+//}
+//
+//- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+//    self.currentUser = user;
+//    
+//    [self addUserData];
+//    
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    
+//}
+//
+//- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+//    self.currentUser = user;
+//    
+//    [self addUserData];
+//    
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    
+//}
+//
+//- (void)addUserData {
+//    
+//    PFQuery *query = [PFQuery queryWithClassName:@"yourData"];
+//    
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        
+//        if ([objects count] == 0) {
+//            
+//            PFObject *yourData = [PFObject objectWithClassName:@"yourData"];
+//            yourData[@"dictionaryKey"] = @"dictionaryValue";
+//            
+//            // If there is a current user you can set that user as the only user that can access this object:
+//            if (self.currentUser) {
+//                yourData.ACL = [PFACL ACLWithUser:self.currentUser];
+//            }
+//            
+//            [yourData saveInBackground];
+//            
+//        } else {
+//            
+//            NSLog(@"You already stored your data");
+//        }
+//        
+//    }];
+//    
+//}
+//
+//
+
 
 
 /*

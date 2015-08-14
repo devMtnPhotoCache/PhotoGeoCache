@@ -40,10 +40,8 @@
     MapViewController *mapViewController = [segue destinationViewController];
     mapViewController.cache = self.cache;
     
-    
 ////    mapViewController.cacheLocation = [CacheController sharedInstance].caches[self.indexPath];
 //    
-//
 }
 
 
