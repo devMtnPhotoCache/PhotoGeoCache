@@ -1,53 +1,44 @@
 //
-//  CameraViewController.m
+//  ImagePickerController.m
 //  PhotoGeoCache
 //
-//  Created by Christian Monson on 5/21/15.
+//  Created by Christian Monson on 8/20/15.
 //  Copyright (c) 2015 PhotoGeoCache. All rights reserved.
 //
 
-#import "CameraViewController.h"
+#import "ImagePickerController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <Parse/Parse.h>
 #import "Cache.h"
 #import "CacheController.h"
 
-@interface CameraViewController ()
+@interface ImagePickerController ()
 
 @property (nonatomic, strong) UIImagePickerController *imagePicker;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *chosenImageView;
-@property (nonatomic, assign) BOOL imagePickerIsDisplayed;
+//@property (nonatomic, assign) BOOL imagePickerIsDisplayed;
+
 @end
 
-@implementation CameraViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
-        //        self.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-    }
-    return self;
-}
+@implementation ImagePickerController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    _imagePicker = [[UIImagePickerController alloc]init];
+    self.imagePicker = [UIImagePickerController new];
+//    self.imagePickerIsDisplayed = YES;
     self.imagePicker.delegate = self;
-    self.imagePicker.allowsEditing = NO;
+    self.delegate = self;
+    self.allowsEditing = NO;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        self.sourceType = UIImagePickerControllerSourceTypeCamera;
     }
     else {
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        self.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
-    self.imagePicker.mediaTypes = [NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil];
-
+    self.mediaTypes = [NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,45 +47,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    if (!self.imagePickerIsDisplayed) {
-        [self presentViewController:self.imagePicker animated:NO completion:nil];
-        self.imagePickerIsDisplayed = YES;
-    }
-}
-
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self clear];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-
-    
     
     [self dismissViewControllerAnimated:YES completion:^{
-       
+        
         NSString* mediaType = info[UIImagePickerControllerMediaType];
         
         if ([mediaType isEqual:kUTTypeImage]) {
-        UIImage *chosenImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
-        self.chosenImageView.image = chosenImage;
-        
-        ///////////////////////SAVE IMAGE HERE
-        [[CacheController sharedInstance] addCacheWithInfo: [MapDataController sharedInstance].currentUserLocation photo:chosenImage rating:@10 difficultyRating:@10 difficultySetting:@"easy" type:@"1" addedByUser:@"user"];
+            UIImage *chosenImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+            self.chosenImageView.image = chosenImage;
+            
+            ///////////////////////SAVE IMAGE HERE
+            [[CacheController sharedInstance] addCacheWithInfo: [MapDataController sharedInstance].currentUserLocation photo:chosenImage rating:@10 difficultyRating:@10 difficultySetting:@"easy" type:@"1" addedByUser:@"user"];
         }
-        self.imagePickerIsDisplayed = NO;
+//        self.imagePickerIsDisplayed = NO;
     }];
-//    [self.navigationController popToRootViewControllerAnimated:YES];
-
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:NO completion:nil];
     [self.tabBarController setSelectedIndex:0];
-    self.imagePickerIsDisplayed = NO;
+//    self.imagePickerIsDisplayed = NO;
 }
 
 - (void)clear {

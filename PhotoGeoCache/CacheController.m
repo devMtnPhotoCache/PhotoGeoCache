@@ -55,11 +55,9 @@
         PFQuery *query = [Cache query];
         [query whereKey:@"location" nearGeoPoint:geoPoint withinMiles:20];
         query.limit = 20;
-        __block NSMutableArray *photoArray;
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            photoArray = [objects mutableCopy];
-            completion(photoArray.copy);
-        }];
+        
+        NSMutableArray *photoArray = [[query findObjects] mutableCopy];
+        completion(photoArray);
 
     } else {
         
@@ -117,7 +115,7 @@
 - (void)addCache:(Cache *)cache {
     
   
-    [cache saveInBackground];
+    [cache save];
 }
 
 
