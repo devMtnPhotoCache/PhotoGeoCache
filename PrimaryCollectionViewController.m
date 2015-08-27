@@ -12,6 +12,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "MapDataController.h"
 #import "CacheDetailViewController.h"
+#import "ImagePickerController.h"
 @import Parse;
 @import ParseUI;
 
@@ -78,9 +79,6 @@
     
 }
 
-
-
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(PictureFeedCollectionViewCell *)sender
 {
     if ([segue.identifier isEqualToString:@"detailIdentifier"]){
@@ -90,6 +88,10 @@
         Cache *cache = [CacheController sharedInstance].caches[indexPath.row];
         cacheDetailViewController.cache = cache;
         
+    }
+    if ([segue.identifier isEqualToString:@"newCacheCameraID"]) {
+        ImagePickerController *ipc = [[ImagePickerController alloc]init];
+        ipc.cameraType = @"newCacheCamera";
     }
 }
 
@@ -152,8 +154,6 @@
     }];
     
 }
-
-
 
 - (void) viewWillAppear:(BOOL)animated {
     [[MapDataController sharedInstance] addLocationManagerDelegate:self];

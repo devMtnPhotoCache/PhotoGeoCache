@@ -27,7 +27,6 @@
 {
     [super viewDidLoad];
     self.imagePicker = [UIImagePickerController new];
-//    self.imagePickerIsDisplayed = YES;
     self.imagePicker.delegate = self;
     self.delegate = self;
     self.allowsEditing = NO;
@@ -41,17 +40,6 @@
     self.mediaTypes = [NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self clear];
-}
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     [self dismissViewControllerAnimated:YES completion:^{
@@ -62,20 +50,24 @@
             UIImage *chosenImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
             self.chosenImageView.image = chosenImage;
             
-            ///////////////////////SAVE IMAGE HERE
-            [[CacheController sharedInstance] addCacheWithInfo: [MapDataController sharedInstance].currentUserLocation photo:chosenImage rating:@10 difficultyRating:@10 difficultySetting:@"easy" type:@"1" addedByUser:@"user"];
+            if ([self.cameraType isEqualToString: @"newCacheCamera"]) {
+                
+                [[CacheController sharedInstance] addCacheWithInfo: [MapDataController sharedInstance].currentUserLocation photo:chosenImage rating:@10 difficultyRating:@10 difficultySetting:@"easy" type:@"1" addedByUser:@"user"];
+                //^passing in dummy data
+                
+            } else if ([self.cameraType isEqualToString: @"foundCacheCamera"]) {
+                UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
+            }
         }
-//        self.imagePickerIsDisplayed = NO;
     }];
-        [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [self.tabBarController setSelectedIndex:0];
-//    self.imagePickerIsDisplayed = NO;
 }
 
 - (void)clear {
@@ -111,6 +103,17 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.titleTextField resignFirstResponder];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self clear];
 }
 
 @end

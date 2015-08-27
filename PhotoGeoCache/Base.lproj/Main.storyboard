@@ -55,7 +55,7 @@
                     <navigationItem key="navigationItem" id="n91-ae-s8c">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="lY1-r0-AV2">
                             <connections>
-                                <segue destination="ccM-eH-NOm" kind="presentation" id="5Ti-Pm-bJK"/>
+                                <segue destination="ccM-eH-NOm" kind="presentation" identifier="newCacheCameraID" id="5Ti-Pm-bJK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -10,4 +10,6 @@
 
 @interface ImagePickerController : UIImagePickerController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
+@property (nonatomic, strong) NSString *cameraType;
+
 @end
