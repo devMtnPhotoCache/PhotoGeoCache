@@ -13,7 +13,7 @@
 #import "MapViewController.h"
 #import "MapDataController.h"
 #import "Cache.h"
-#import "CameraViewController.h"
+#import "imagePickerController.h"
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
@@ -129,10 +129,11 @@
     
     UIAlertAction *completeAction = [UIAlertAction actionWithTitle:@"Take a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
-        CameraViewController *newCamera = [[CameraViewController alloc] init];
+        ImagePickerController *imagePickerController = [ImagePickerController new];
+        imagePickerController.cameraType = @"foundCacheCamera";
         
         dispatch_async(dispatch_get_main_queue(), ^ {
-                [self presentViewController:newCamera animated:YES completion:nil];
+                [self presentViewController:imagePickerController animated:YES completion:nil];
         });
         
     }];
