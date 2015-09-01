@@ -17,9 +17,7 @@
 @interface MapViewController : UIViewController
 
 @property (nonatomic) CLLocation *cacheLocation;
-
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
-//@property (nonatomic, strong) CLLocationManager *locationManager;
 @property (strong, nonatomic) Cache *cache;
 
 - (void)displayCacheCircle;
