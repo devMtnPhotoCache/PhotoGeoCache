@@ -17,7 +17,6 @@
 @property (nonatomic, strong) UIImagePickerController *imagePicker;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *chosenImageView;
-//@property (nonatomic, assign) BOOL imagePickerIsDisplayed;
 
 @end
 
@@ -27,12 +26,13 @@
 {
     [super viewDidLoad];
     self.imagePicker = [UIImagePickerController new];
+    self.imagePicker.allowsEditing = NO;
     self.imagePicker.delegate = self;
     self.delegate = self;
-    self.allowsEditing = NO;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         self.sourceType = UIImagePickerControllerSourceTypeCamera;
+        self.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
     }
     else {
         self.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -41,29 +41,32 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [self dismissViewControllerAnimated:YES completion:nil];
     
-    [self dismissViewControllerAnimated:YES completion:^{
+    NSString* mediaType = info[UIImagePickerControllerMediaType];
+    
+    if ([mediaType isEqual:kUTTypeImage]) {
+        UIImage *chosenImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+        self.chosenImageView.image = chosenImage;
         
-        NSString* mediaType = info[UIImagePickerControllerMediaType];
-        
-        if ([mediaType isEqual:kUTTypeImage]) {
-            UIImage *chosenImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
-            self.chosenImageView.image = chosenImage;
+        if ([self.cameraType isEqualToString: @"newCacheCamera"]) {
             
-            if ([self.cameraType isEqualToString: @"newCacheCamera"]) {
-                
-                [[CacheController sharedInstance] addCacheWithInfo: [MapDataController sharedInstance].currentUserLocation photo:chosenImage rating:@10 difficultyRating:@10 difficultySetting:@"easy" type:@"1" addedByUser:@"user"];
-                //^passing in dummy data
-                
-            } else if ([self.cameraType isEqualToString: @"foundCacheCamera"]) {
-                UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
-            }
+            [[CacheController sharedInstance] addCacheWithInfo: [MapDataController sharedInstance].currentUserLocation photo:chosenImage rating:@10 difficultyRating:@10 difficultySetting:@"easy" type:@"1" addedByUser:@"user"];
+            //^passing in dummy data
+            
+        } else if ([self.cameraType isEqualToString: @"foundCacheCamera"]) {
+            UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
         }
-    }];
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    };
+    [self.dismissDelegate popFromModalToRootViewControllerMethod];
     
 }
 
+- (void)didPushDismissButton {
+    
+    [self.dismissDelegate popFromModalToRootViewControllerMethod];
+    
+}
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -114,6 +117,10 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self clear];
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [self.dismissDelegate popFromModalToRootViewControllerMethod];
 }
 
 @end

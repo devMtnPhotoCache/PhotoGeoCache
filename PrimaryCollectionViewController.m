@@ -89,10 +89,6 @@
         cacheDetailViewController.cache = cache;
         
     }
-    if ([segue.identifier isEqualToString:@"newCacheCameraID"]) {
-        ImagePickerController *ipc = [[ImagePickerController alloc]init];
-        ipc.cameraType = @"newCacheCamera";
-    }
 }
 
 #pragma Parse Login

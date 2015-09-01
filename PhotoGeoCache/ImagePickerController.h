@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ImagePickerHelperDelegate;
+
 @interface ImagePickerController : UIImagePickerController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) NSString *cameraType;
+@property (nonatomic, weak) id<ImagePickerHelperDelegate> dismissDelegate;
 
 @end
+
+@protocol ImagePickerHelperDelegate <NSObject>
+
+@required
+- (void)popFromModalToRootViewControllerMethod;
+
+@end
+

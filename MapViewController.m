@@ -15,7 +15,7 @@
 #import "Cache.h"
 #import "imagePickerController.h"
 
-@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate,ImagePickerHelperDelegate>
 
 @property (nonatomic) MKUserLocation *userLocation;
 @property (nonatomic) BOOL showsUserLocation;
@@ -158,5 +158,13 @@
     }
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ImagePickerController *imagePickerController = [segue destinationViewController];
+    imagePickerController.dismissDelegate = self;
+}
+
+- (void)popFromModalToRootViewControllerMethod {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 @end
