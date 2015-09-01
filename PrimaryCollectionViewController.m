@@ -33,7 +33,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    UIImage *titleImage = [UIImage imageNamed:@"headerTitleImage.png"];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:titleImage];;
+   // self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:68 green:184 blue:106 alpha:1];
  
 }
 
