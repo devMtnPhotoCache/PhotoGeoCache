@@ -124,30 +124,40 @@
 }
 
 - (void)cacheCompleteAlert {
+    ImagePickerController *imagePickerController = [ImagePickerController new];
+    imagePickerController.cameraType = @"foundCacheCamera";
     
-    UIAlertController *completeAlert = [UIAlertController alertControllerWithTitle:@"You did it! Congratulations!" message:nil preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction *completeAction = [UIAlertAction actionWithTitle:@"Take a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        
-        ImagePickerController *imagePickerController = [ImagePickerController new];
-        imagePickerController.cameraType = @"foundCacheCamera";
-        
-        dispatch_async(dispatch_get_main_queue(), ^ {
-                [self presentViewController:imagePickerController animated:YES completion:nil];
-        });
-        
-    }];
-    
-    UIAlertAction *stayAction = [UIAlertAction actionWithTitle:@"Complete without a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }];
-    
-    [completeAlert addAction:completeAction];
-    [completeAlert addAction:stayAction];
-    
-    [self presentViewController:completeAlert animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^ {
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    });
+
 }
+
+//- (void)cacheCompleteAlert {
+//    
+//    UIAlertController *completeAlert = [UIAlertController alertControllerWithTitle:@"You did it! Congratulations!" message:nil preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction *completeAction = [UIAlertAction actionWithTitle:@"Take a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        
+//        ImagePickerController *imagePickerController = [ImagePickerController new];
+//        imagePickerController.cameraType = @"foundCacheCamera";
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^ {
+//                [self presentViewController:imagePickerController animated:YES completion:nil];
+//        });
+//        
+//    }];
+//    
+//    UIAlertAction *stayAction = [UIAlertAction actionWithTitle:@"Complete without a photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        
+//        [self.navigationController popToRootViewControllerAnimated:YES];
+//    }];
+//    
+//    [completeAlert addAction:completeAction];
+//    [completeAlert addAction:stayAction];
+//    
+//    [self presentViewController:completeAlert animated:YES completion:nil];
+//}
 
 - (IBAction)finishButtonTapped:(id)sender {
     

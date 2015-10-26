@@ -127,11 +127,13 @@
     CLLocationDistance distance = [self.currentUserLocation distanceFromLocation:self.cacheLocation];
     NSLog(@"%f", distance);
     
-    if (distance < 11820680) {
-        return YES;
-    } else {
-        return NO;
-    }
+    return YES;
+    
+//    if (distance < whatever distance we decide) {
+//        return YES;
+//    } else {
+//        return NO;
+//    }
 }
 
 @end
