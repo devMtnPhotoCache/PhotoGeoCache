@@ -92,8 +92,21 @@
         if (succeeded) {
             [[NSNotificationCenter defaultCenter] postNotificationName:@"uploadComplete" object:nil];
             NSLog(@"Photo has been uploaded to Parse");
+            
             UIAlertView *uploadSuccess = [[UIAlertView alloc] initWithTitle:@"Upload Successful" message:@"Your photo was successfully uploaded to FlashCache" delegate:self cancelButtonTitle:@"Awesome!" otherButtonTitles: nil];
             [uploadSuccess show];
+            
+//  SOMETHING LIKE THIS NEEDS TO BE ADDED TO REPLACE DEPRICATED CODE
+            
+//            UIAlertController *uploadSuccess = [UIAlertController alertControllerWithTitle:@"Upload Successful" message:@"Your photo was successfully uploaded to FlascCache" preferredStyle:UIAlertControllerStyleAlert];
+//            
+//            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+//                                                                    style:UIAlertActionStyleDefault
+//                                                                    handler:^(UIAlertAction * action) {}];
+//            
+//            [uploadSuccess addAction:defaultAction];
+//
+//            [self. presentViewController:uploadSuccess animated:YES completion:nil];
         }
         else {
             [[NSNotificationCenter defaultCenter] postNotificationName:@"uploadComplete" object:nil];

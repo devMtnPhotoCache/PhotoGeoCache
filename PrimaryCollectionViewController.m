@@ -23,8 +23,6 @@
 @property (nonatomic, strong) NSIndexPath *indexPath;
 @property (nonatomic, strong) PFUser *currentUser;
 
-//@property (strong, nonatomic) PrimaryCollectionViewControllerDataSource *dataSource;
-
 @end
 
 @implementation PrimaryCollectionViewController
@@ -35,8 +33,6 @@
     [super viewDidLoad];
     UIImage *titleImage = [UIImage imageNamed:@"headerTitleImage.png"];
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:titleImage];;
-   // self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:68 green:184 blue:106 alpha:1];
- 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,6 +86,11 @@
         Cache *cache = [CacheController sharedInstance].caches[indexPath.row];
         cacheDetailViewController.cache = cache;
         
+    }
+    
+    if ([segue.identifier isEqualToString:@"newCacheCameraID"]){
+        ImagePickerController *imagePickerController = [segue destinationViewController];
+        imagePickerController.cameraType = @"newCacheCamera";
     }
 }
 

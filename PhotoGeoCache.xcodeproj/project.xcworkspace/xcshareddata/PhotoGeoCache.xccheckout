@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>124838C2-600C-4420-9F46-931ACC580281</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>PhotoGeoCache</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0A41E64D27690C39FAFA4C62CA122E5D442C33F3</key>
 		<string>https://github.com/devMtnPhotoCache/PhotoGeoCache.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PhotoGeoCache.xcodeproj/project.xcworkspace</string>
+	<string>PhotoGeoCache.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0A41E64D27690C39FAFA4C62CA122E5D442C33F3</key>
