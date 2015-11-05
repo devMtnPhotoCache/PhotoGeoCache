@@ -40,9 +40,7 @@
     self.mediaTypes = [NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil];
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-//    [self dismissViewControllerAnimated:YES completion:nil];
-    
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     NSString* mediaType = info[UIImagePickerControllerMediaType];
     
     if ([mediaType isEqual:kUTTypeImage]) {
@@ -115,9 +113,6 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.dismissDelegate popFromModalToRootViewControllerMethod];
-    [self dismissViewControllerAnimated:YES completion: ^{
-        [self popToRootViewControllerAnimated:NO];
-    }];
     [self clear];
 }
 

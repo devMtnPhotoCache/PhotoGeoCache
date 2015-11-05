@@ -14,7 +14,7 @@
 #import "MapDataController.h"
 #import "Cache.h"
 
-@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate,ImagePickerHelperDelegate>
+@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (nonatomic) MKUserLocation *userLocation;
 @property (nonatomic) BOOL showsUserLocation;
@@ -125,7 +125,6 @@
 - (void)cacheCompleteAlert {
     ImagePickerController *imagePickerController = [[ImagePickerController alloc] init];
     imagePickerController.cameraType = @"foundCacheCamera";
-    imagePickerController.dismissDelegate = self;
     
     dispatch_async(dispatch_get_main_queue(), ^ {
         [self presentViewController:imagePickerController animated:YES completion:nil];

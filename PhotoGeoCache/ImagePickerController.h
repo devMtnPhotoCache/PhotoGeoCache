@@ -10,7 +10,7 @@
 
 @protocol ImagePickerHelperDelegate;
 
-@interface ImagePickerController : UIImagePickerController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ImagePickerController : UIImagePickerController <UIImagePickerControllerDelegate>
 
 @property (nonatomic, strong) NSString *cameraType;
 @property (nonatomic, weak) id<ImagePickerHelperDelegate> dismissDelegate;
