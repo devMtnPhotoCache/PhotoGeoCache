@@ -133,9 +133,6 @@
 
 }
 
-/*- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    [self performSegueWithIdentifier:@"footloose" sender:nil];
-}*/
 //- (void)cacheCompleteAlert {
 //    
 //    UIAlertController *completeAlert = [UIAlertController alertControllerWithTitle:@"You did it! Congratulations!" message:nil preferredStyle:UIAlertControllerStyleAlert];

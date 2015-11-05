@@ -29,7 +29,6 @@
     self.imagePicker = [UIImagePickerController new];
     self.imagePicker.allowsEditing = NO;
     self.imagePicker.delegate = self;
-//    self.delegate = self;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         self.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -42,7 +41,7 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
     
     NSString* mediaType = info[UIImagePickerControllerMediaType];
     
@@ -59,14 +58,6 @@
             UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
         }
     };
-//    [self.dismissDelegate popFromModalToRootViewControllerMethod];
-//    [self performSegueWithIdentifier:@"myUnwindIdentifier" sender:self];
-//    [self popToRootViewControllerAnimated:YES];
-    
-    //[self performSegueWithIdentifier:@"unwind" sender:nil];
-    
-    //[self unwindFromImagePicker:[UIStoryboardSegue segueWithIdentifier:@"myUnwindIdentifier" source: self destination:[PrimaryCollectionViewController new] performHandler:^{
-    //}]];
 }
 
 - (void)didPushDismissButton {
@@ -125,18 +116,9 @@
     [super viewWillDisappear:animated];
     [self.dismissDelegate popFromModalToRootViewControllerMethod];
     [self dismissViewControllerAnimated:YES completion: ^{
-        [self performSegueWithIdentifier:@"myUnwindIdentifier" sender:self];
         [self popToRootViewControllerAnimated:NO];
     }];
     [self clear];
 }
-
-
-
-//- (IBAction)unwindFromImagePicker:(UIStoryboardSegue *)segue {
-//    [self dismissViewControllerAnimated:YES completion: ^{
-//        [self popToRootViewControllerAnimated:NO];
-//    }];
-//}
 
 @end
