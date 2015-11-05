@@ -46,7 +46,6 @@
     
 
     if ([MapDataController sharedInstance].currentUserLocation != nil) {
-
         PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:[MapDataController sharedInstance].currentUserLocation];
         
         [[PFUser currentUser] setObject:geoPoint forKey:@"currentLocation"];
@@ -58,13 +57,9 @@
         
         NSMutableArray *photoArray = [[query findObjects] mutableCopy];
         completion(photoArray);
-
     } else {
-        
         completion(nil);
-        
     }
-
 }
 
 - (void)addCacheWithInfo:(CLLocation *)location photo:(UIImage *)photo rating:(NSNumber *)rating difficultyRating: (NSNumber *)difficultyRating difficultySetting:(NSString *)difficultySetting type:(NSString *)type addedByUser:(NSString *)addedByUser {
@@ -113,24 +108,17 @@
             UIAlertView *uploadSuccess = [[UIAlertView alloc] initWithTitle:@"Uh-oh..." message:@"Your photo was unable to be uploaded to FlashCache" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
             [uploadSuccess show];
             NSLog(@"%@", error);
-            
         }
     }];
 
 }
 
 - (void)removeCache:(Cache *)cache {
-    
-    
     [cache deleteInBackground];
 }
 
 - (void)addCache:(Cache *)cache {
-    
-  
     [cache save];
 }
-
-
 
 @end

@@ -37,7 +37,6 @@
        Cache *currentCache = [Cache new];
         
         sharedInstance.cacheLocation = [[CLLocation alloc] initWithLatitude:currentCache.location.latitude longitude:currentCache.location.longitude];
-        
     });
     
     return sharedInstance;
@@ -57,7 +56,6 @@
         if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
             [self.locationManager requestWhenInUseAuthorization];
         }
-        
         _observers = [[NSMutableArray alloc] init];
     }
     return self;
@@ -85,7 +83,6 @@
 
 //Sets class property currentUserLocation to the last logged location when a user moves
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-
     CLLocation *location = locations.lastObject;
     CLLocationDistance distance = [self getDistance:location];
     
@@ -97,13 +94,11 @@
             [delegate locationControllerDidUpdateLocation:locations.lastObject];
         }
     }
-    
 }
 
 
 //Currently being called in:
 - (CLLocation *)getRandomizedSearchCircle:(CLLocation *)cacheLocation {
-    
     CLLocationDegrees randomizedCacheLatitude = cacheLocation.coordinate.latitude + (((float)arc4random_uniform(2)-.3))/ARC4RANDOM_MAX;
     CLLocationDegrees randomizedCacheLongitude = cacheLocation.coordinate.longitude + (((float)arc4random_uniform(2)-.3))/ARC4RANDOM_MAX;
     CLLocation *randomizedCircleCenter = [[CLLocation alloc] initWithLatitude:randomizedCacheLatitude longitude:randomizedCacheLongitude];
@@ -115,7 +110,6 @@
 
 //Convenience method to get distances between current user location and a passed in cache location
 - (CLLocationDistance)getDistance:(CLLocation *)cacheLocation {
-    
     CLLocationDistance distance = [self.location distanceFromLocation:cacheLocation];
     
     return distance;
@@ -123,7 +117,6 @@
 
 
 - (BOOL)canCompleteCache {
-    
     CLLocationDistance distance = [self.currentUserLocation distanceFromLocation:self.cacheLocation];
     NSLog(@"%f", distance);
     
@@ -134,6 +127,7 @@
 //    } else {
 //        return NO;
 //    }
+    //^insert logic here to calculate distance from cache
 }
 
 @end

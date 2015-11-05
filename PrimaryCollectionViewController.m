@@ -149,9 +149,7 @@
             
             NSLog(@"You already stored your data");
         }
-        
     }];
-    
 }
 
 - (void) viewWillAppear:(BOOL)animated {

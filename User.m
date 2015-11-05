@@ -19,7 +19,6 @@
 @dynamic friends;
 
 + (NSString *)parseClassName {
-    
     return @"User";
 }
 

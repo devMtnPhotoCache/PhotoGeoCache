@@ -22,7 +22,6 @@
 //****Sample Location Code for debugging! Will use Parse data for Cache objects.*****
 
 + (NSString *)parseClassName {
-    
     return @"Cache";
 }
 
@@ -31,15 +30,11 @@
 }
 
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
-        
-        
     }
     return self;
 }
-
 
 @end

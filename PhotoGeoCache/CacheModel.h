@@ -12,5 +12,4 @@
 @interface CacheModel : NSObject
 @property (strong, nonatomic) CLLocation *cacheLocation;
 
-
 @end
