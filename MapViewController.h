@@ -11,10 +11,11 @@
 #import <MapKit/MKAnnotation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Cache.h"
+#import "ImagePickerController.h"
 
 @import UIKit;
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController <ImagePickerHelperDelegate>
 
 @property (nonatomic) CLLocation *cacheLocation;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

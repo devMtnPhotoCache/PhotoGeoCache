@@ -167,6 +167,10 @@
     [[MapDataController sharedInstance] removelocationManagerDelegate:self];
 }
 
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+    NSLog(@"unwind!");
+}
+
 
 /*
 #pragma mark - Navigation

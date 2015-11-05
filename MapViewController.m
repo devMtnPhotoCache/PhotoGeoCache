@@ -13,7 +13,6 @@
 #import "MapViewController.h"
 #import "MapDataController.h"
 #import "Cache.h"
-#import "imagePickerController.h"
 
 @interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate,ImagePickerHelperDelegate>
 
@@ -124,8 +123,9 @@
 }
 
 - (void)cacheCompleteAlert {
-    ImagePickerController *imagePickerController = [ImagePickerController new];
+    ImagePickerController *imagePickerController = [[ImagePickerController alloc] init];
     imagePickerController.cameraType = @"foundCacheCamera";
+    imagePickerController.dismissDelegate = self;
     
     dispatch_async(dispatch_get_main_queue(), ^ {
         [self presentViewController:imagePickerController animated:YES completion:nil];
@@ -133,6 +133,9 @@
 
 }
 
+/*- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    [self performSegueWithIdentifier:@"footloose" sender:nil];
+}*/
 //- (void)cacheCompleteAlert {
 //    
 //    UIAlertController *completeAlert = [UIAlertController alertControllerWithTitle:@"You did it! Congratulations!" message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -176,5 +179,6 @@
 - (void)popFromModalToRootViewControllerMethod {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
 
 @end

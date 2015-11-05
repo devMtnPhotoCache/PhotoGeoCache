@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 #import "Cache.h"
 #import "CacheController.h"
+#import "PrimaryCollectionViewController.h"
 
 @interface ImagePickerController ()
 
@@ -28,7 +29,7 @@
     self.imagePicker = [UIImagePickerController new];
     self.imagePicker.allowsEditing = NO;
     self.imagePicker.delegate = self;
-    self.delegate = self;
+//    self.delegate = self;
     
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
         self.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -58,8 +59,14 @@
             UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
         }
     };
-    [self.dismissDelegate popFromModalToRootViewControllerMethod];
+//    [self.dismissDelegate popFromModalToRootViewControllerMethod];
+//    [self performSegueWithIdentifier:@"myUnwindIdentifier" sender:self];
+//    [self popToRootViewControllerAnimated:YES];
     
+    //[self performSegueWithIdentifier:@"unwind" sender:nil];
+    
+    //[self unwindFromImagePicker:[UIStoryboardSegue segueWithIdentifier:@"myUnwindIdentifier" source: self destination:[PrimaryCollectionViewController new] performHandler:^{
+    //}]];
 }
 
 - (void)didPushDismissButton {
@@ -88,21 +95,21 @@
         photo[@"title"] = self.titleTextField.text;
         [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!succeeded) {
-                [self showError];
+//                [self showError];
             }
         }];
     }
     else {
-        [self showError];
+//        [self showError];
     }
     [self clear];
     [self.tabBarController setSelectedIndex:0];
 }
 
-- (void)showError {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Could not post your photo, please try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
-}
+//- (void)showError {
+//    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Could not post your photo, please try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//    [alert show];
+//}
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.titleTextField resignFirstResponder];
@@ -116,11 +123,20 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    [self.dismissDelegate popFromModalToRootViewControllerMethod];
+    [self dismissViewControllerAnimated:YES completion: ^{
+        [self performSegueWithIdentifier:@"myUnwindIdentifier" sender:self];
+        [self popToRootViewControllerAnimated:NO];
+    }];
     [self clear];
 }
 
--(void)viewDidDisappear:(BOOL)animated {
-    [self.dismissDelegate popFromModalToRootViewControllerMethod];
-}
+
+
+//- (IBAction)unwindFromImagePicker:(UIStoryboardSegue *)segue {
+//    [self dismissViewControllerAnimated:YES completion: ^{
+//        [self popToRootViewControllerAnimated:NO];
+//    }];
+//}
 
 @end
